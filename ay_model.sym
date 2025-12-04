@@ -1,8 +1,8 @@
 v {xschem version=3.4.7RC file_version=1.2}
 G {}
-K {type=subcircuit
-format="@name @pinlist @symname"
-template="name=X1"}
+K {type=primitive
+format="@name [ @@clk ] [ @@ch_c[3..0] ] [ @@iob[7..0] ]@model"
+template="name=a1 model=ay_model"}
 V {}
 S {}
 E {}
@@ -76,3 +76,4 @@ T {_rst} 20 110 0 0 0.4 0.4 {}
 T {clk} -80 70 2 0 0.4 0.4 {}
 T {bc2} 20 -80 0 0 0.4 0.4 {}
 T {@name} -20 -420 0 0 0.4 0.4 {}
+T {@symname} -80 160 0 0 0.4 0.4 {}

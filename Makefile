@@ -10,7 +10,7 @@ prog: #for sram
 	sudo chmod -R 777 /dev/bus/usb/ #for WSL
 	dfu-util --device 1d50:6146 --alt 0 -D $(filename).bin -R
 
-clean:
+clean: clean-asic
 	rm -rf $(filename).blif $(filename).asc $(filename).json $(filename).bin
 
 sim: sim-refresh
@@ -34,8 +34,11 @@ pnr-gui:
 	nextpnr-ice40 --json $(filename).json --pcf $(pcf_file) --asc $(filename).asc --up5k --package sg48 --gui
 
 build-asic:
-	nix-shell ~/librelane/shell.nix
-	librelane config.yaml
+	nix-shell ~/librelane/shell.nix --run "librelane config.yaml --save-views-to asic/"
 
 clean-asic:
 	rm -rf runs/
+	rm -rf asic/
+
+gui-asic:
+	nix-shell ~/librelane/shell.nix --run "openroad -gui asic/odb/jt49.odb"

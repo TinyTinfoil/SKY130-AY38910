@@ -1,7 +1,7 @@
 # Basics
-DESIGN_NAME: top
-VERILOG_FILES: dir::src/*.sv
-CLOCK_PERIOD: 10
+DESIGN_NAME: jt49
+VERILOG_FILES: dir::src/jt*.v
+CLOCK_PERIOD: 1000
 CLOCK_PORT: clk
 PNR_SDC_FILE: dir::src/impl.sdc
 SIGNOFF_SDC_FILE: dir::src/signoff.sdc
