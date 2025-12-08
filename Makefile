@@ -1,5 +1,6 @@
 filename = src/top
 pcf_file = fpga/iceBlinkPico.pcf
+src_files = src/jt49_bus.v src/jt49_cen.v src/jt49_div.v src/jt49_eg.v src/jt49_exp.v src/jt49_noise.v src/jt49.v
 
 build:
 	yosys -p "synth_ice40 -top top -json $(filename).json -spram" $(filename).sv
@@ -10,7 +11,7 @@ prog: #for sram
 	sudo chmod -R 777 /dev/bus/usb/ #for WSL
 	dfu-util --device 1d50:6146 --alt 0 -D $(filename).bin -R
 
-clean: clean-asic
+clean: clean-asic clean-test
 	rm -rf $(filename).blif $(filename).asc $(filename).json $(filename).bin
 
 sim: sim-refresh
@@ -42,3 +43,13 @@ clean-asic:
 
 gui-asic:
 	nix-shell ~/librelane/shell.nix --run "openroad -gui asic/odb/jt49.odb"
+
+test-sim:
+	iverilog -g2012 -o verilog.tb test/test.v $(src_files) /usr/share/yosys/ice40/cells_sim.v
+	vvp verilog.tb
+
+view-verilog:
+	gtkwave test.vcd &
+
+clean-test:
+	rm -rf verilog.tb test.vcd
