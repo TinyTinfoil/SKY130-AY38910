@@ -23,6 +23,8 @@ build-asic:
 
 clean-asic:
 	rm -rf runs/
+
+clean-asic-full:
 	rm -rf asic/
 
 gui-asic:
@@ -32,7 +34,7 @@ test.vcd:
 	iverilog -g2012 -o verilog.tb test/test.sv $(src_files)
 	vvp verilog.tb
 
-view-verilog:
+view-verilog: test.vcd
 	gtkwave test.vcd &
 
 clean-test:

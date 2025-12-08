@@ -38,7 +38,9 @@ jt49_bus uut( // note that input ports are not multiplexed
     .din        ( din       ),
     .sel        ( 1'b1      ),
 //    .data_out   ( data_out  ),
-    .sound      ( sound     )
+    // .sound      ( sound     ),
+    .nA9       ( 1'b0     ),
+    .A8        ( 1'b1     )
 );
 
 initial begin

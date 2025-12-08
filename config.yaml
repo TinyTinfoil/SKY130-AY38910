@@ -1,5 +1,5 @@
 # Basics
-DESIGN_NAME: jt49
+DESIGN_NAME: jt49_bus
 VERILOG_FILES: dir::src/jt*.v
 CLOCK_PERIOD: 1000
 CLOCK_PORT: clk

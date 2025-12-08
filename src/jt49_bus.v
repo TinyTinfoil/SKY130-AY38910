@@ -35,10 +35,10 @@ module jt49_bus ( // note that input ports are not multiplexed
 
     input            sel, // if sel is low, the clock is divided by 2
     output     [7:0] dout,
-    output     [9:0] sound,  // combined channel output
-    output     [7:0] A,      // linearised channel output
-    output     [7:0] B,
-    output     [7:0] C,
+    // output     [9:0] sound,  // combined channel output
+    output     [4:0] A,      // linearised channel output
+    output     [4:0] B,
+    output     [4:0] C,
     output           sample,
 
     input      [7:0] IOA_in,
@@ -47,15 +47,31 @@ module jt49_bus ( // note that input ports are not multiplexed
 
     input      [7:0] IOB_in,
     output     [7:0] IOB_out,
-    output           IOB_oe
+    output           IOB_oe,
+    input nA9,//
+    input A8//
     //test1, test2 not implemented (should not be implemented)
-    //ioa/iob not matching, gate based on oe
-    //a8 and _a9 not implemented. if {na9,a8} != 01, all bufs are high z
-    // din and dout should be one, gate based on bdir
-    //bdir low-> dout, bdir high-> din
+    //if {na9,a8} != 01, all bufs are high z
     //clk_en needed by implementation
     //sel not needed
 );
+
+// always_comb begin
+//     if ({nA9,A8} != 2'b01) begin
+//         //all bufs high z, but faked as zeros
+//         da = 8'bz;
+//         IOA = 8'bz;
+//         IOB = 8'bz;
+//     end else begin
+//     // din and dout should be one, gate based on bdir
+//     //bdir low-> dout, bdir high-> din
+//     if (bdir) din = da; else da <= dout;
+//     //ioa/iob, gate based on oe
+//     // output enable, input when low
+//     if (IOA_oe) IOA = IOA_out; else IOA_in <= IOA;
+//     if (IOB_oe) IOB = IOB_out; else IOB_in <= IOB;
+//     end
+// end
 
 parameter [2:0] COMP=3'b000;
 
@@ -114,7 +130,7 @@ jt49 #(.COMP(COMP)) u_jt49( // note that input ports are not multiplexed
     .din    (  din_latch ),
     .sel    (  sel       ), // if sel is low, the clock is divided by 2
     .dout   (  dout      ),
-    .sound  (  sound     ),  // combined channel output
+    // .sound  (  sound     ),  // combined channel output
     .sample (  sample    ),
     .A      (  A         ),      // linearised channel output
     .B      (  B         ),

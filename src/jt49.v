@@ -31,10 +31,10 @@ module jt49 ( // note that input ports are not multiplexed
     input  [7:0]     din,
     input            sel, // if sel is low, the clock is divided by 2
     output reg [7:0] dout,
-    output reg [9:0] sound,  // combined channel output
-    output reg [7:0] A,      // linearised channel output
-    output reg [7:0] B,
-    output reg [7:0] C,
+    // output reg [9:0] sound,  // combined channel output
+    output reg [4:0] A,      // linearised channel output
+    output reg [4:0] B,
+    output reg [4:0] C,
     output           sample,
 
     input      [7:0] IOA_in,
@@ -143,14 +143,9 @@ jt49_eg u_env(
 );
 
 reg  [4:0] logA, logB, logC, log;
-wire [7:0] lin;
-
-jt49_exp u_exp(
-    .clk    ( clk  ),
-    .comp   ( comp ),
-    .din    ( log  ),
-    .dout   ( lin  )
-);
+assign A = logA;
+assign B = logB;
+assign C = logC;
 
 wire [4:0] volA = { regarray[ 8][3:0], regarray[ 8][3] };
 wire [4:0] volB = { regarray[ 9][3:0], regarray[ 9][3] };
@@ -162,7 +157,7 @@ wire use_noA  = regarray[ 7][3];
 wire use_noB  = regarray[ 7][4];
 wire use_noC  = regarray[ 7][5];
 
-reg [3:0] acc_st;
+
 
 always @(posedge clk) if( clk_en ) begin
     Amix <= (noise|use_noA) & (bitA|regarray[7][0]);
@@ -174,45 +169,55 @@ always @(posedge clk) if( clk_en ) begin
     logC <= !Cmix ? 5'd0 : (use_envC ? envelope : volC );
 end
 
-reg  [9:0] acc;
-wire [9:0] elin;
+// reg [3:0] acc_st;
+// reg  [9:0] acc;
+// wire [9:0] elin;
 
-assign elin = {2'd0,lin};
+// wire [7:0] lin;
 
-always @(posedge clk, negedge rst_n) begin
-    if( !rst_n ) begin
-        acc_st <= 4'b1;
-        acc    <= 10'd0;
-        A      <= 8'd0;
-        B      <= 8'd0;
-        C      <= 8'd0;
-        sound  <= 10'd0;
-    end else if(clk_en) begin
-        acc_st <= { acc_st[2:0], acc_st[3] };
-        // Lumping the channel outputs for YM2203 will cause only the higher
-        // voltage to pass throuh, as the outputs seem to use a source follower.
-        acc    <= YM2203_LUMPED==1 ? (acc>elin ? acc : elin) : acc + elin;
-        case( acc_st )
-            4'b0001: begin
-                log   <= logA;
-                acc   <= 10'd0;
-                sound <= acc;
-            end
-            4'b0010: begin
-                A   <= lin;
-                log <= logB;
-            end
-            4'b0100: begin
-                B   <= lin;
-                log <= logC;
-            end
-            4'b1000: begin // last sum
-                C   <= lin;
-            end
-            default:;
-        endcase
-    end
-end
+// jt49_exp u_exp(
+//     .clk    ( clk  ),
+//     .comp   ( comp ),
+//     .din    ( log  ),
+//     .dout   ( lin  )
+// );
+
+// assign elin = {2'd0,lin};
+
+// always @(posedge clk, negedge rst_n) begin
+//     if( !rst_n ) begin
+//         acc_st <= 4'b1;
+//         acc    <= 10'd0;
+//         A      <= 8'd0;
+//         B      <= 8'd0;
+//         C      <= 8'd0;
+//         sound  <= 10'd0;
+//     end else if(clk_en) begin
+//         acc_st <= { acc_st[2:0], acc_st[3] };
+//         // Lumping the channel outputs for YM2203 will cause only the higher
+//         // voltage to pass throuh, as the outputs seem to use a source follower.
+//         acc    <= YM2203_LUMPED==1 ? (acc>elin ? acc : elin) : acc + elin;
+//         case( acc_st )
+//             4'b0001: begin
+//                 log   <= logA;
+//                 acc   <= 10'd0;
+//                 sound <= acc;
+//             end
+//             4'b0010: begin
+//                 A   <= lin;
+//                 log <= logB;
+//             end
+//             4'b0100: begin
+//                 B   <= lin;
+//                 log <= logC;
+//             end
+//             4'b1000: begin // last sum
+//                 C   <= lin;
+//             end
+//             default:;
+//         endcase
+//     end
+// end
 
 reg  [7:0] read_mask;
 
