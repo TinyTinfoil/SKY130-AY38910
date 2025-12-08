@@ -45,7 +45,7 @@ gui-asic:
 	nix-shell ~/librelane/shell.nix --run "openroad -gui asic/odb/jt49.odb"
 
 test-sim:
-	iverilog -g2012 -o verilog.tb test/test.v $(src_files) /usr/share/yosys/ice40/cells_sim.v
+	iverilog -g2012 -o verilog.tb test/test.v $(src_files)
 	vvp verilog.tb
 
 view-verilog:

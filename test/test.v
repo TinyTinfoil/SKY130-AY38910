@@ -164,7 +164,7 @@ jt49 uut( // note that input ports are not multiplexed
 );
 
 initial begin
-    $dumpfile("test.lxt");
+    $dumpfile("test.vcd");
     $dumpvars;
     $dumpon;
     #(10*16*256*256*128) 
