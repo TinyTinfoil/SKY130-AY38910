@@ -30,6 +30,7 @@ module jt49_bus ( // note that input ports are not multiplexed
     // bus control pins of original chip
     input            bdir,
     input            bc1,
+    input            bc2, //ay-3-8910 has this pin
     input  [7:0]     din,
 
     input            sel, // if sel is low, the clock is divided by 2
@@ -42,11 +43,18 @@ module jt49_bus ( // note that input ports are not multiplexed
 
     input      [7:0] IOA_in,
     output     [7:0] IOA_out,
-    output           IOA_oe,
+    output           IOA_oe, // output enable, input when low
 
     input      [7:0] IOB_in,
     output     [7:0] IOB_out,
     output           IOB_oe
+    //test1, test2 not implemented (should not be implemented)
+    //ioa/iob not matching, gate based on oe
+    //a8 and _a9 not implemented. if {na9,a8} != 01, all bufs are high z
+    // din and dout should be one, gate based on bdir
+    //bdir low-> dout, bdir high-> din
+    //clk_en needed by implementation
+    //sel not needed
 );
 
 parameter [2:0] COMP=3'b000;
@@ -64,6 +72,22 @@ always @(posedge clk)
         addr_ok <= 1'b1;
     end else begin // I/O cannot use clk_en
         // addr must be
+        if (!bc2) begin
+            case ( {bdir,bc1} )
+                2'b00: { wr_n, cs_n } <= 2'b11; // inactive 00
+                2'b01: begin //intake 11
+                    { wr_n, cs_n } <= 2'b11;
+                    addr    <= din[3:0];
+                    addr_ok <= din[7:4] == 4'd0;
+                end
+                2'b10: begin //intake 11
+                    { wr_n, cs_n } <= 2'b11;
+                    addr    <= din[3:0];
+                    addr_ok <= din[7:4] == 4'd0;
+                end
+                2'b11: { wr_n, cs_n } <= 2'b11; // inactive 00
+            endcase
+        end else begin
         case( {bdir,bc1} )
             2'b00: { wr_n, cs_n } <= 2'b11;
             2'b01: { wr_n, cs_n } <= addr_ok ? 2'b10 : 2'b11;
@@ -77,6 +101,7 @@ always @(posedge clk)
                 addr_ok <= din[7:4] == 4'd0;
             end
         endcase // {bdir,bc1}
+        end
     end
 
 jt49 #(.COMP(COMP)) u_jt49( // note that input ports are not multiplexed

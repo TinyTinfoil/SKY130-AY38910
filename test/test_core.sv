@@ -1,27 +1,27 @@
 `timescale 1ns / 1ps
+//verilog file that generates control signals for ay-3-8910 without dependance
+module test_core(
+    input logic clk,// init 0, forever toggle every 50ns
+    input logic rst_n, // init 0, set to 1 after 500ns
+    //pins after map to ay-3-8910
+    output logic cen, // .clk_en
+    output logic bdir,
+    output logic bc1,
+    output logic bc2,
+    output logic [7:0] din
+    // sel tied to 1
+    //sound output from ay-3-8910
+);
 
-module test;
-
-reg clk, cen=1'b0, rst_n, restart;
+reg restart;
 wire [4:0] env;
 reg  [3:0]ctrl;
-
-initial begin
-    clk = 1'b0;
-    forever clk = #50 ~clk;
-end // initial
 
 reg [1:0] cen_cnt=2'd0;
 always @(negedge clk) begin
     cen_cnt <= cen_cnt+2'd1;
     cen <= cen_cnt==2'd0;
 end
-
-initial begin
-    rst_n = 1'b0;
-    #500
-    rst_n = 1'b1;
-end // initial
 
 reg [7:0] aux;
 
@@ -34,11 +34,6 @@ always @(posedge clk ) begin
         restart <= aux==8'd0;
     end
 end
-
-wire [9:0] sound;
-reg  [7:0] data_in;
-reg  [3:0] addr;
-reg  wr_n;
 
 reg [11:0] cmd_list [0:127];
 integer cmd_cnt, cmd_wait, cmd_end=127;
@@ -119,57 +114,72 @@ initial begin : cmd_set
     cmd_list[68] = { 4'he, 8'hff };  // end
 end
 
+// State machine for bus protocol
+// To write a register: first latch address (bdir=1,bc1=1,bc2=1), then write data (bdir=1,bc1=0,bc2=1)
+reg [1:0] bus_state;
+localparam IDLE = 2'd0, LATCH_ADDR = 2'd1, WRITE_DATA = 2'd2, WAIT_STATE = 2'd3;
+
 always @(posedge clk)
     if( !rst_n ) begin
-        wr_n <= 1'b1;
-        addr <= 4'd0;
+        bdir <= 1'b0;
+        bc1  <= 1'b0;
+        bc2  <= 1'b1;
+        din  <= 8'd0;
         cmd_cnt  <= 0;
         cmd_wait <= 0;
+        bus_state <= IDLE;
     end
     else begin
-        wr_n <= 1'b1;
-        if( cmd_cnt!=cmd_end || cmd_wait != 0) begin
-            if( cmd_wait == 0 ) begin
-                if( cmd_list[cmd_cnt][11:8]== 4'hf ) begin
-                    cmd_wait <= cmd_list[cmd_cnt][7:0] << 11;
+        case (bus_state)
+            IDLE: begin
+                bdir <= 1'b0;
+                bc1  <= 1'b0;
+                bc2  <= 1'b1;
+                if( cmd_cnt != cmd_end || cmd_wait != 0 ) begin
+                    if( cmd_wait == 0 ) begin
+                        if( cmd_list[cmd_cnt][11:8] == 4'hf ) begin
+                            cmd_wait <= cmd_list[cmd_cnt][7:0] << 11;
+                            cmd_cnt <= cmd_cnt + 1;
+                        end
+                        else if( cmd_list[cmd_cnt][11:8] == 4'he ) begin
+                            // $display("Simulation finished through command\n");
+                            // $finish;
+                            cmd_cnt <= cmd_cnt + 1;
+                        end
+                        else begin
+                            // Latch address: bdir=1, bc1=1, bc2=1
+                            din <= {4'd0, cmd_list[cmd_cnt][11:8]};
+                            bdir <= 1'b1;
+                            bc1  <= 1'b1;
+                            bc2  <= 1'b1;
+                            bus_state <= LATCH_ADDR;
+                        end
+                    end
+                    else begin
+                        cmd_wait <= cmd_wait - 1;
+                    end
                 end
-                else if( cmd_list[cmd_cnt][11:8]== 4'he ) begin
-                    $display("Simulation finished through command\n");
-                    $finish;
-                end
-                else begin
-                    addr <= cmd_list[cmd_cnt][11:8];
-                    data_in <= cmd_list[cmd_cnt][7:0];
-                    wr_n <= 1'b0;
-                end
+            end
+            LATCH_ADDR: begin
+                // After latching address, go to write data state
+                // Write data: bdir=1, bc1=0, bc2=1
+                din <= cmd_list[cmd_cnt][7:0];
+                bdir <= 1'b1;
+                bc1  <= 1'b0;
+                bc2  <= 1'b1;
+                bus_state <= WRITE_DATA;
+            end
+            WRITE_DATA: begin
+                // Return to idle, increment command counter
+                bdir <= 1'b0;
+                bc1  <= 1'b0;
+                bc2  <= 1'b1;
                 cmd_cnt <= cmd_cnt + 1;
+                bus_state <= IDLE;
             end
-            else begin
-                cmd_wait <= cmd_wait-1;
-            end
-        end
+            default: bus_state <= IDLE;
+        endcase
     end
 
-jt49 uut( // note that input ports are not multiplexed
-    .rst_n      ( rst_n     ),
-    .clk        ( clk       ),    // signal on positive edge
-    .clk_en     ( cen       ),    // clock enable on negative edge
-    .addr       ( addr      ),
-    .cs_n       ( 1'b0      ),
-    .wr_n       ( wr_n      ),  // write
-    .din        ( data_in   ),
-    .sel        ( 1'b1      ),
-//    .data_out   ( data_out  ),
-    .sound      ( sound     )
-);
-
-initial begin
-    $dumpfile("test.vcd");
-    $dumpvars;
-    $dumpon;
-    #(10*16*256*256*128) 
-    $display("WARNING: simulation too long");
-    $finish;
-end
 
 endmodule
