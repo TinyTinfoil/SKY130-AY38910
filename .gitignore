@@ -1,3 +1,4 @@
 # Ignore everything inside runs/
 runs/
 asic/
+test.vcd

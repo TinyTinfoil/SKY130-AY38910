@@ -29,6 +29,9 @@ clean-asic-full:
 
 gui-asic:
 	nix-shell ~/librelane/shell.nix --run "openroad -gui asic/odb/jt49.odb"
+
+view-asic:
+	cd asic/mag && magic jt49_bus.mag &
 ############################# Verilog testbench flow
 test.vcd:
 	iverilog -g2012 -o verilog.tb test/test.sv $(src_files)
@@ -39,3 +42,9 @@ view-verilog: test.vcd
 
 clean-test:
 	rm -rf verilog.tb test.vcd
+############################ Xschem testbench
+view-xschem:
+	cd xschem && xschem testbench.sch
+build-xschem:
+	iverilog -o xschem/jt49_bus src/jt49_bus.sv
+	iverilog -o xschem/test_core test/test_core.sv

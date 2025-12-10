@@ -23,6 +23,13 @@
 
 // This is a wrapper with the BDIR/BC1 pins
 /* verilator coverage_off */
+`timescale 1ns / 1ps
+`include "src/jt49_cen.v"
+`include "src/jt49_div.v"
+`include "src/jt49_eg.v"
+`include "src/jt49_exp.v"
+`include "src/jt49_noise.v"
+`include "src/jt49.v"
 module jt49_bus ( // note that input ports are not multiplexed
     input            rst_n,
     input            clk,    // signal on positive edge
@@ -34,6 +41,10 @@ module jt49_bus ( // note that input ports are not multiplexed
     input  [7:0]     din,
 
     input            sel, // if sel is low, the clock is divided by 2
+    input      [7:0] IOA_in,
+    input      [7:0] IOB_in,
+     input nA9,//
+    input A8,//
     output     [7:0] dout,
     // output     [9:0] sound,  // combined channel output
     output     [4:0] A,      // linearised channel output
@@ -41,15 +52,12 @@ module jt49_bus ( // note that input ports are not multiplexed
     output     [4:0] C,
     output           sample,
 
-    input      [7:0] IOA_in,
     output     [7:0] IOA_out,
     output           IOA_oe, // output enable, input when low
 
-    input      [7:0] IOB_in,
     output     [7:0] IOB_out,
-    output           IOB_oe,
-    input nA9,//
-    input A8//
+    output           IOB_oe
+
     //test1, test2 not implemented (should not be implemented)
     //if {na9,a8} != 01, all bufs are high z
     //clk_en needed by implementation

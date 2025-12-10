@@ -143,9 +143,14 @@ jt49_eg u_env(
 );
 
 reg  [4:0] logA, logB, logC, log;
-assign A = logA;
-assign B = logB;
-assign C = logC;
+always @(posedge clk) begin
+    A <= logA;
+    B <= logB;
+    C <= logC;
+end
+// assign A = logA;
+// assign B = logB;
+// assign C = logC;
 
 wire [4:0] volA = { regarray[ 8][3:0], regarray[ 8][3] };
 wire [4:0] volB = { regarray[ 9][3:0], regarray[ 9][3] };
