@@ -1,6 +1,6 @@
 filename_fpga_fpga = src/top
 pcf_file = fpga/iceBlinkPico.pcf
-src_files = src/jt49_bus.v src/jt49_cen.v src/jt49_div.v src/jt49_eg.v src/jt49_exp.v src/jt49_noise.v src/jt49.v
+src_files = src/jt49_bus.sv
 ############################# FPGA flow
 build:
 	yosys -p "synth_ice40 -top top -json $(filename_fpga).json -spram" $(filename_fpga).sv
@@ -40,7 +40,7 @@ test.vcd:
 view-verilog: test.vcd
 	gtkwave test.vcd &
 
-clean-test:
+clean-verilog:
 	rm -rf verilog.tb test.vcd
 ############################ Xschem testbench
 view-xschem:
@@ -48,3 +48,14 @@ view-xschem:
 build-xschem:
 	iverilog -o xschem/jt49_bus src/jt49_bus.sv
 	iverilog -o xschem/test_core test/test_core.sv
+
+############################ Python venv
+VENV = .venv
+PYTHON = $(VENV)/bin/python
+
+venv:
+	python3 -m venv $(VENV)
+	$(VENV)/bin/pip install vcdvcd
+
+vcd2spice: test.vcd
+	$(PYTHON) vcdtospice.py test.vcd -s "clk=clk" "cen=cen" "rst_n=rst_n" "bdir=bdir" "bc1=bc1" "bc2=bc2" "din=din[7:0]" -o xschem/test_core.spice --subckt test_core
