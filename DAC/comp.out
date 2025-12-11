@@ -1,0 +1,56 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_generic_po and Circuit 2 cell sky130_fd_pr__res_generic_po are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__res_generic_po and sky130_fd_pr__res_generic_po are equivalent.
+
+Class DACLayoutOff.spice (1):  Merged 73 series devices.
+Subcircuit summary:
+Circuit 1: DAC_xschem.spice                |Circuit 2: DACLayoutOff.spice              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (16)               |sky130_fd_pr__nfet_01v8 (16)               
+sky130_fd_pr__res_generic_po (18)          |sky130_fd_pr__res_generic_po (91->18)      
+(no matching element)                      |MUX0 (1)                                   
+Number of devices: 34 **Mismatch**         |Number of devices: 35 **Mismatch**         
+Number of nets: 36 **Mismatch**            |Number of nets: 38 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: DAC_xschem.spice                |Circuit 2: DACLayoutOff.spice              
+
+---------------------------------------------------------------------------------------
+Net: net13                                 |Net: a_510_n300#                           
+  sky130_fd_pr__nfet_01v8/(1|3) = 16       |  sky130_fd_pr__nfet_01v8/(1|3) = 12       
+  sky130_fd_pr__res_generic_po/(1|2) = 1   |  sky130_fd_pr__res_generic_po/(1|2) = 1   
+                                           |                                           
+Net: GND                                   |Net: GND                                   
+  sky130_fd_pr__nfet_01v8/4 = 16           |  MUX0/anode = 1                           
+  sky130_fd_pr__res_generic_po/(1|2) = 1   |  sky130_fd_pr__res_generic_po/(1|2) = 1   
+                                           |                                           
+Net: VDD                                   |Net: VDD                                   
+  sky130_fd_pr__res_generic_po/(1|2) = 1   |  sky130_fd_pr__res_generic_po/(1|2) = 1   
+                                           |  MUX0/cathode = 1                         
+                                           |                                           
+(no matching net)                          |Net: a_2110_n200#                          
+                                           |  sky130_fd_pr__nfet_01v8/4 = 16           
+                                           |                                           
+(no matching net)                          |Net: a_n200_n300#                          
+                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: DAC_xschem.spice                |Circuit 2: DACLayoutOff.spice              
+
+---------------------------------------------------------------------------------------
+(no matching instance)                     |Instance: MUX0:ACLayoutOff                 
+                                           |  anode = 2                                
+                                           |  cathode = 2                              
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+Cells have no pins;  pin matching not needed.
+Device classes DAC_xschem.spice and DACLayoutOff.spice are equivalent.
+
+Final result: Netlists do not match.
+Port matching may fail to disambiguate symmetries.
