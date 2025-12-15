@@ -1,0 +1,42 @@
+** sch_path: /home/veswaranandam/SKY130-AY38910/xschem/testbench_postbehavioral.sch
+**.subckt testbench_postbehavioral
+X1 VP A0 A1 A2 A3 A5 VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN VN
++ VN VN VN VN VN VN VN VN VN VP bc1 bc2 bdir CLK cen din_out0 din_out1 din_out2 din_out3 din_out4 din_out5 din_out6 din_out7 VN VN VN
++ VN VN VN VN VN VN VRST VN VP jt49_bus
+Vdd VP VN 1.8
+Vss VN GND 0
+X2 CLK cen VRST bdir bc1 bc2 din_out7 din_out6 din_out5 din_out4 din_out3 din_out2 din_out1 din_out0 test_core
+**** begin user architecture code
+
+
+.param VDD=1.8
+.include /home/veswaranandam/SKY130-AY38910/xschem/jt49_bus.spice
+.include /home/veswaranandam/SKY130-AY38910/xschem/test_core.spice
+.tran 10p 3ms
+*.control
+
+**** change default parameters of auto adc/dac bridges
+*pre_set auto_bridge_d_in =
+*+ ( ".model auto_adc adc_bridge(
+*+   in_low = '0.9 * 1.8 / 2' in_high = '1.1 * 1.8 / 2'
+*+   rise_delay=1e-11 fall_delay=1e-11 )"
+*+ "auto_bridge%d [ %s ] [ %s ] auto_adc" )
+
+*pre_set auto_bridge_d_out =
+*+ ( ".model auto_dac dac_bridge(
+*+   out_low = 0 out_high = 1.8
+*+   t_rise=1e-11 t_fall=1e-11 )"
+*+ "auto_bridge%d [ %s ] [ %s ] auto_dac" )
+
+*  save all
+*  tran 10p 3ms
+*  remzerovec
+*  write tb_counter_wrapper.raw
+*.endc
+
+
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

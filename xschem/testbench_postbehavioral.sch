@@ -4,34 +4,17 @@ K {}
 V {}
 S {}
 E {}
-N -990 60 -990 80 {lab=CLK}
-N -300 -60 -300 -40 {lab=#net1}
-N -300 -40 -210 -40 {lab=#net1}
-N -210 -40 -210 -20 {lab=#net1}
-N -300 -100 -300 -80 {lab=#net2}
-N -300 -80 -210 -80 {lab=#net2}
-N -210 -80 -210 -60 {lab=#net2}
-N -300 -140 -300 -120 {lab=#net3}
-N -300 -120 -210 -120 {lab=#net3}
-N -210 -120 -210 -100 {lab=#net3}
-N 20 -10 20 0 {lab=#net4}
-N -300 0 20 0 {lab=#net4}
-N -300 -20 -300 -0 {lab=#net4}
-N -300 90 -210 90 {lab=#net5}
-N -230 90 -230 150 {lab=#net5}
+N -390 -140 -370 -140 {lab=bc1}
+N -390 -100 -370 -100 {lab=bc2}
+N -390 -60 -370 -60 {lab=bdir}
+N -390 -20 -370 -20 {lab=cen}
 C {jt49_bus_post.sym} -120 -30 0 1 {name=X1 model=jt49_bus}
-C {test_core.sym} -390 -30 0 0 {name=a2 model=test_core
-
-***Icarus_verilog***
-device_model=".model test_core d_cosim simulation=\\"ivlng\\" sim_args=[\\"test_core\\"] delay=1e-12"
-
-tclcommand="edit_file [abs_sym_path counter.v]"}
-C {vsource.sym} -990 110 0 0 {name=VCLOCK value="pulse 0 'VDD' 49995p 10p 10p 49990p 100n"}
-C {lab_pin.sym} -990 60 0 0 {name=p13 lab=CLK}
-C {code_shown.sym} -1200 -440 0 0 {name=COMMANDS only_toplevel=false value="
+C {code_shown.sym} -1310 -440 0 0 {name=COMMANDS only_toplevel=false value="
 .param VDD=1.8
-.include ~/SKY130-AY38910/xschem/jt49_bus.spice
-.control
+.include /home/veswaranandam/SKY130-AY38910/xschem/jt49_bus.spice
+.include /home/veswaranandam/SKY130-AY38910/xschem/test_core.spice
+.tran 10p 3ms
+*.control
 
 **** change default parameters of auto adc/dac bridges
 *pre_set auto_bridge_d_in =
@@ -47,12 +30,11 @@ C {code_shown.sym} -1200 -440 0 0 {name=COMMANDS only_toplevel=false value="
 *+ \\"auto_bridge%d [ %s ] [ %s ] auto_dac\\" )
 
 *  save all
-  tran 10p 3ms
+*  tran 10p 3ms
 *  remzerovec
 *  write tb_counter_wrapper.raw
-.endc
+*.endc
 "}
-C {lab_pin.sym} -530 30 0 0 {name=p1 lab=CLK}
 C {lab_pin.sym} 20 30 0 1 {name=p2 lab=CLK}
 C {madvlsi/vsource.sym} -1190 100 0 0 {name=Vdd
 only_toplevel=true
@@ -72,10 +54,6 @@ C {lab_pin.sym} -210 60 0 0 {name=p10 sig_type=std_logic only_toplevel=true lvs_
 C {lab_pin.sym} 20 -180 2 0 {name=p14 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
 C {lab_pin.sym} 20 -90 2 0 {name=p17 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
 C {lab_pin.sym} 20 -50 2 0 {name=p18 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
-C {gnd.sym} -990 140 0 0 {name=l2 lab=GND only_toplevel=true lvs_ignore=true}
-C {vsource.sym} -230 180 0 0 {name=VRST value="pulse 0 'VDD' 500n 10p 10p 0 0"}
-C {gnd.sym} -230 210 0 0 {name=l3 lab=GND only_toplevel=true lvs_ignore=true}
-C {lab_pin.sym} -300 -200 2 0 {name=p35 lab=din_out[7..0]}
 C {lab_pin.sym} 20 -330 2 0 {name=p37 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
 C {lab_pin.sym} 20 -370 2 0 {name=p38 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
 C {lab_pin.sym} -550 -790 0 0 {name=p3 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
@@ -118,11 +96,11 @@ C {lab_pin.sym} 300 -670 2 0 {name=p74 sig_type=std_logic only_toplevel=true lvs
 C {lab_pin.sym} 300 -710 2 0 {name=p75 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
 C {lab_pin.sym} 300 -750 2 0 {name=p76 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
 C {lab_pin.sym} 300 -790 2 0 {name=p77 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
-C {lab_pin.sym} 0 -670 0 0 {name=p78 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
-C {lab_pin.sym} 0 -630 0 0 {name=p79 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
-C {lab_pin.sym} 0 -590 0 0 {name=p80 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
-C {lab_pin.sym} 0 -550 0 0 {name=p81 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
-C {lab_pin.sym} 0 -510 0 0 {name=p82 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
+C {lab_pin.sym} 0 -670 0 0 {name=p78 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A0}
+C {lab_pin.sym} 0 -630 0 0 {name=p79 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A1}
+C {lab_pin.sym} 0 -590 0 0 {name=p80 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A2}
+C {lab_pin.sym} 0 -550 0 0 {name=p81 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A3}
+C {lab_pin.sym} 0 -510 0 0 {name=p82 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A5}
 C {lab_pin.sym} -120 -670 0 0 {name=p83 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
 C {lab_pin.sym} -120 -630 0 0 {name=p84 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
 C {lab_pin.sym} -120 -590 0 0 {name=p85 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
@@ -142,3 +120,26 @@ C {lab_pin.sym} -400 -710 2 0 {name=p22 lab=din_out2}
 C {lab_pin.sym} -400 -750 2 0 {name=p23 lab=din_out1}
 C {lab_pin.sym} -400 -790 2 0 {name=p24 lab=din_out0}
 C {sky130_fd_pr/corner.sym} 210 120 0 0 {name=CORNER only_toplevel=true lvs_ignore=true corner=tt}
+C {test_core_post.sym} -480 -30 0 0 {name=X2 model=test_core
+}
+C {lab_pin.sym} -620 30 0 0 {name=p25 lab=CLK}
+C {lab_pin.sym} -370 -140 2 0 {name=p26 lab=bc1}
+C {lab_pin.sym} -370 -100 2 0 {name=p27 lab=bc2}
+C {lab_pin.sym} -370 -60 2 0 {name=p28 lab=bdir}
+C {lab_pin.sym} -370 -20 2 0 {name=p29 lab=cen
+}
+C {lab_pin.sym} -390 90 2 0 {name=p30 lab=VRST}
+C {lab_pin.sym} 20 -10 2 0 {name=p1 lab=cen
+}
+C {lab_pin.sym} -210 90 0 0 {name=p35 lab=VRST}
+C {lab_pin.sym} -210 -20 0 0 {name=p93 lab=bdir}
+C {lab_pin.sym} -210 -60 0 0 {name=p94 lab=bc2}
+C {lab_pin.sym} -210 -100 0 0 {name=p95 lab=bc1}
+C {lab_pin.sym} -390 -170 2 0 {name=p31 lab=din_out7}
+C {lab_pin.sym} -390 -200 2 0 {name=p32 lab=din_out6}
+C {lab_pin.sym} -390 -230 2 0 {name=p33 lab=din_out5}
+C {lab_pin.sym} -390 -260 2 0 {name=p34 lab=din_out4}
+C {lab_pin.sym} -390 -290 2 0 {name=p44 lab=din_out3}
+C {lab_pin.sym} -390 -320 2 0 {name=p45 lab=din_out2}
+C {lab_pin.sym} -390 -350 2 0 {name=p46 lab=din_out1}
+C {lab_pin.sym} -390 -380 2 0 {name=p47 lab=din_out0}

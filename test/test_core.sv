@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ps / 1ps
 //verilog file that generates control signals for ay-3-8910 without dependance
 module test_core(
     input logic clk,// init 0, forever toggle every 50ns
@@ -12,6 +12,13 @@ module test_core(
     // sel tied to 1
     //sound output from ay-3-8910
 );
+initial begin
+    bdir = 1'b0;
+    bc1  = 1'b0;
+    bc2  = 1'b0;
+    din  = 7'd0;
+    cen = 1'b0;
+end
 
 reg restart;
 wire [4:0] env;
@@ -49,13 +56,15 @@ initial begin : cmd_set
     cmd_list[ 3] = { 4'h3, 8'h02 };  // set ch B freq 
     cmd_list[ 4] = { 4'h4, 8'h23 };
     cmd_list[ 5] = { 4'h5, 8'h03 };  // set ch B freq 
-    cmd_list[ 6] = { 4'hf, 8'hff };  // wait
+    cmd_list[ 6] = { 4'h5, 8'h03 };  // set ch B freq 
+    // cmd_list[ 6] = { 4'hf, 8'hff };  // wait
 
     cmd_list[ 7] = { 4'h0, 8'h00 };
     cmd_list[ 8] = { 4'h1, 8'h00 };  // stop ch A freq 
     cmd_list[ 9] = { 4'h7, 8'h31 };  // A = noise
     cmd_list[10] = { 4'h6, 8'h03 };  // noise freq
-    cmd_list[11] = { 4'hf, 8'hff };  // wait
+    cmd_list[11] = { 4'h6, 8'h02 };  // noise freq
+    // cmd_list[11] = { 4'hf, 8'hff };  // wait
 
     // envelope
     cmd_list[12] = { 4'hd, 8'h0e };  // zig zag

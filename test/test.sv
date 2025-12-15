@@ -10,7 +10,7 @@ initial begin
 end // initial
 initial begin
     rst_n = 1'b0;
-    #500
+    #100
     rst_n = 1'b1;
 end // initial
 
@@ -44,8 +44,9 @@ jt49_bus uut( // note that input ports are not multiplexed
 initial begin
     $dumpfile("test.vcd");
     $dumpvars(1,uut);
+    $dumpvars(1,tb);
     $dumpon;
-    #823303350 //precalculated max time
+    #2000000 //precalculated max time
     $display("WARNING: simulation too long");
     $finish;
 end
