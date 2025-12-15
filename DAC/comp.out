@@ -7,50 +7,75 @@ Circuit 1 cell sky130_fd_pr__res_generic_po and Circuit 2 cell sky130_fd_pr__res
 Equate elements:  no current cell.
 Device classes sky130_fd_pr__res_generic_po and sky130_fd_pr__res_generic_po are equivalent.
 
-Class DACLayoutOff.spice (1):  Merged 73 series devices.
+Class DACLayoutOff.spice (0):  Merged 73 series devices.
 Subcircuit summary:
-Circuit 1: DAC_xschem.spice                |Circuit 2: DACLayoutOff.spice              
+Circuit 1: DACLayoutOff.spice              |Circuit 2: SKY130-AY38910/DAC/DAC_xschem.s 
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__nfet_01v8 (16)               |sky130_fd_pr__nfet_01v8 (16)               
-sky130_fd_pr__res_generic_po (18)          |sky130_fd_pr__res_generic_po (91->18)      
-(no matching element)                      |MUX0 (1)                                   
-Number of devices: 34 **Mismatch**         |Number of devices: 35 **Mismatch**         
-Number of nets: 36 **Mismatch**            |Number of nets: 38 **Mismatch**            
+sky130_fd_pr__res_generic_po (91->18)      |sky130_fd_pr__res_generic_po (18)          
+Number of devices: 34                      |Number of devices: 34                      
+Number of nets: 36                         |Number of nets: 36                         
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
-Circuit 1: DAC_xschem.spice                |Circuit 2: DACLayoutOff.spice              
-
----------------------------------------------------------------------------------------
-Net: net13                                 |Net: a_510_n300#                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 16       |  sky130_fd_pr__nfet_01v8/(1|3) = 12       
-  sky130_fd_pr__res_generic_po/(1|2) = 1   |  sky130_fd_pr__res_generic_po/(1|2) = 1   
-                                           |                                           
-Net: GND                                   |Net: GND                                   
-  sky130_fd_pr__nfet_01v8/4 = 16           |  MUX0/anode = 1                           
-  sky130_fd_pr__res_generic_po/(1|2) = 1   |  sky130_fd_pr__res_generic_po/(1|2) = 1   
-                                           |                                           
-Net: VDD                                   |Net: VDD                                   
-  sky130_fd_pr__res_generic_po/(1|2) = 1   |  sky130_fd_pr__res_generic_po/(1|2) = 1   
-                                           |  MUX0/cathode = 1                         
-                                           |                                           
-(no matching net)                          |Net: a_2110_n200#                          
-                                           |  sky130_fd_pr__nfet_01v8/4 = 16           
-                                           |                                           
-(no matching net)                          |Net: a_n200_n300#                          
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
-Circuit 1: DAC_xschem.spice                |Circuit 2: DACLayoutOff.spice              
-
----------------------------------------------------------------------------------------
-(no matching instance)                     |Instance: MUX0:ACLayoutOff                 
-                                           |  anode = 2                                
-                                           |  cathode = 2                              
----------------------------------------------------------------------------------------
-Netlists do not match.
-Port matching may fail to disambiguate symmetries.
+Netlists match uniquely with property errors.
+sky130_fd_pr__res_generic_po:20 vs. sky130_fd_pr__res_generic_po:R19:
+ l circuit1: 67.2   circuit2: 1000   (delta=175%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:86 vs. sky130_fd_pr__res_generic_po:R20:
+ l circuit1: 516.49   circuit2: 1   (delta=199%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:71 vs. sky130_fd_pr__res_generic_po:R1:
+ l circuit1: 1.75   circuit2: 1   (delta=54.5%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:64 vs. sky130_fd_pr__res_generic_po:R21:
+ l circuit1: 188.1   circuit2: 1   (delta=198%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:18 vs. sky130_fd_pr__res_generic_po:R14:
+ l circuit1: 133.65   circuit2: 1   (delta=197%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:55 vs. sky130_fd_pr__res_generic_po:R9:
+ l circuit1: 94.32   circuit2: 1   (delta=196%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:11 vs. sky130_fd_pr__res_generic_po:R4:
+ l circuit1: 2.97   circuit2: 1   (delta=99.2%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:10 vs. sky130_fd_pr__res_generic_po:R10:
+ l circuit1: 67.2   circuit2: 1   (delta=194%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:84 vs. sky130_fd_pr__res_generic_po:R11:
+ l circuit1: 47.16   circuit2: 1   (delta=192%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:19 vs. sky130_fd_pr__res_generic_po:R2:
+ l circuit1: 5.94   circuit2: 1   (delta=142%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:3 vs. sky130_fd_pr__res_generic_po:R12:
+ l circuit1: 33.75   circuit2: 1   (delta=188%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:77 vs. sky130_fd_pr__res_generic_po:R6:
+ l circuit1: 16.8   circuit2: 1   (delta=178%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:57 vs. sky130_fd_pr__res_generic_po:R7:
+ l circuit1: 11.62   circuit2: 1   (delta=168%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:4 vs. sky130_fd_pr__res_generic_po:R13:
+ l circuit1: 23.9   circuit2: 1   (delta=184%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:40 vs. sky130_fd_pr__res_generic_po:R8:
+ l circuit1: 8.7   circuit2: 1   (delta=159%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:31 vs. sky130_fd_pr__res_generic_po:R3:
+ l circuit1: 4.27   circuit2: 1   (delta=124%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:101 vs. sky130_fd_pr__res_generic_po:R5:
+ l circuit1: 2.1   circuit2: 1   (delta=71%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
+sky130_fd_pr__res_generic_po:93 vs. sky130_fd_pr__res_generic_po:R15:
+ l circuit1: 3.35   circuit2: 1   (delta=108%, cutoff=1%)
+ w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
 Cells have no pins;  pin matching not needed.
-Device classes DAC_xschem.spice and DACLayoutOff.spice are equivalent.
+Device classes DACLayoutOff.spice and SKY130-AY38910/DAC/DAC_xschem.spice are equivalent.
 
-Final result: Netlists do not match.
-Port matching may fail to disambiguate symmetries.
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ DACLayoutOff.spice

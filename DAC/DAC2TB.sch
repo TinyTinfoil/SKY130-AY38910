@@ -90,16 +90,16 @@ N 1090 -20 1230 -20 {lab=PROBE1}
 N 1020 -180 1090 -180 {lab=#net13}
 N 3190 -20 3190 60 {lab=PROBE1}
 N 3190 60 3190 110 {lab=PROBE1}
-C {madvlsi/vsource.sym} 1390 -980 0 0 {name=Vdd
+C {madvlsi/vsource.sym} 1460 -720 0 0 {name=Vdd
 value=1.8}
-C {madvlsi/gnd.sym} 1390 -950 0 0 {name=l1 lab=GND}
-C {madvlsi/vdd.sym} 1390 -1010 0 0 {name=l5 lab=VDD}
-C {code_shown.sym} 1000 -770 0 0 {name=SPICE only_toplevel=false value="
+C {madvlsi/gnd.sym} 1460 -690 0 0 {name=l1 lab=GND}
+C {madvlsi/vdd.sym} 1460 -750 0 0 {name=l5 lab=VDD}
+C {code_shown.sym} 1070 -510 0 0 {name=SPICE only_toplevel=false value="
 .param Tstep = 5u
 .tran 0.1u \{16*Tstep\}
 .save all"
 }
-C {sky130_fd_pr/corner.sym} 990 -920 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {sky130_fd_pr/corner.sym} 1060 -660 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {madvlsi/resistor.sym} 1200 -180 3 1 {name=R1
 value=206
 m=1}
@@ -181,75 +181,22 @@ C {lab_pin.sym} 2870 -280 1 0 {name=p17 sig_type=std_logic lab=MUX13}
 C {lab_pin.sym} 3010 -280 1 0 {name=p18 sig_type=std_logic lab=MUX14}
 C {lab_pin.sym} 3150 -280 1 0 {name=p19 sig_type=std_logic lab=MUX15}
 C {lab_pin.sym} 1050 -280 1 0 {name=p12 sig_type=std_logic lab=MUX0}
-C {madvlsi/vsource.sym} 1550 -820 0 0 {name=VM1
-value="PULSE(0 1.8 \{14*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 1550 -790 0 0 {name=l2 lab=GND}
-C {lab_pin.sym} 1550 -850 3 1 {name=p13 sig_type=std_logic lab=MUX1}
-C {madvlsi/vsource.sym} 1820 -820 0 0 {name=VM2
-value="PULSE(0 1.8 \{13*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 1820 -790 0 0 {name=l6 lab=GND}
-C {lab_pin.sym} 1820 -850 3 1 {name=p14 sig_type=std_logic lab=MUX2}
-C {madvlsi/vsource.sym} 2090 -820 0 0 {name=VM3
-value="PULSE(0 1.8 \{12*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2090 -790 0 0 {name=l7 lab=GND}
-C {lab_pin.sym} 2090 -850 3 1 {name=p21 sig_type=std_logic lab=MUX3}
-C {madvlsi/vsource.sym} 2360 -820 0 0 {name=VM4
-value="PULSE(0 1.8 \{11*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2360 -790 0 0 {name=l8 lab=GND}
-C {lab_pin.sym} 2360 -850 3 1 {name=p22 sig_type=std_logic lab=MUX4}
-C {madvlsi/vsource.sym} 2630 -820 0 0 {name=VM5
-value="PULSE(0 1.8 \{10*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2630 -790 0 0 {name=l9 lab=GND}
-C {lab_pin.sym} 2630 -850 3 1 {name=p23 sig_type=std_logic lab=MUX5}
-C {madvlsi/vsource.sym} 1550 -650 0 0 {name=VM6
-value="PULSE(0 1.8 \{9*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 1550 -620 0 0 {name=l10 lab=GND}
-C {lab_pin.sym} 1550 -680 3 1 {name=p24 sig_type=std_logic lab=MUX6}
-C {madvlsi/vsource.sym} 1820 -650 0 0 {name=VM7
-value="PULSE(0 1.8 \{8*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 1820 -620 0 0 {name=l12 lab=GND}
-C {lab_pin.sym} 1820 -680 3 1 {name=p25 sig_type=std_logic lab=MUX7}
-C {madvlsi/vsource.sym} 2090 -650 0 0 {name=VM8
-value="PULSE(0 1.8 \{7*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2090 -620 0 0 {name=l13 lab=GND}
-C {lab_pin.sym} 2090 -680 3 1 {name=p26 sig_type=std_logic lab=MUX8
-}
-C {madvlsi/vsource.sym} 2360 -650 0 0 {name=VM9
-value="PULSE(0 1.8 \{6*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2360 -620 0 0 {name=l11 lab=GND}
-C {lab_pin.sym} 2360 -680 3 1 {name=p11 sig_type=std_logic lab=MUX9}
-C {madvlsi/vsource.sym} 2630 -650 0 0 {name=VM10
-value="PULSE(0 1.8 \{5*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2630 -620 0 0 {name=l14 lab=GND}
-C {lab_pin.sym} 2630 -680 3 1 {name=p27 sig_type=std_logic lab=MUX10}
-C {madvlsi/vsource.sym} 1550 -490 0 0 {name=VM11
-value="PULSE(0 1.8 \{4*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 1550 -460 0 0 {name=l15 lab=GND}
-C {lab_pin.sym} 1550 -520 3 1 {name=p28 sig_type=std_logic lab=MUX11}
-C {madvlsi/vsource.sym} 1820 -490 0 0 {name=VM12
-value="PULSE(0 1.8 \{3*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 1820 -460 0 0 {name=l16 lab=GND}
-C {lab_pin.sym} 1820 -520 3 1 {name=p29 sig_type=std_logic lab=MUX12}
-C {madvlsi/vsource.sym} 2090 -490 0 0 {name=VM13
-value="PULSE(0 1.8 \{2*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2090 -460 0 0 {name=l17 lab=GND}
-C {lab_pin.sym} 2090 -520 3 1 {name=p30 sig_type=std_logic lab=MUX13}
-C {madvlsi/vsource.sym} 2360 -490 0 0 {name=VM14
-value="PULSE(0 1.8 \{1*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2360 -460 0 0 {name=l18 lab=GND}
-C {lab_pin.sym} 2360 -520 3 1 {name=p31 sig_type=std_logic lab=MUX14}
-C {madvlsi/vsource.sym} 2630 -490 0 0 {name=VM15
-value="PULSE(0 1.8 0 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 2630 -460 0 0 {name=l19 lab=GND}
-C {lab_pin.sym} 2630 -520 3 1 {name=p32 sig_type=std_logic lab=MUX15}
-C {madvlsi/vsource.sym} 1480 -980 0 0 {name=VM0
-value="PULSE(0 1.8 \{15*Tstep\} 1n 1n \{Tstep\} \{16*Tstep\})"}
-C {madvlsi/gnd.sym} 1480 -950 0 0 {name=VM16 lab=GND}
-C {lab_pin.sym} 1480 -1010 3 1 {name=VM17 sig_type=std_logic lab=MUX0}
-C {madvlsi/vsource.sym} 1280 -980 0 0 {name=Vbias
-value=0.6}
-C {madvlsi/gnd.sym} 1280 -950 0 0 {name=l22 lab=GND}
-C {lab_pin.sym} 1280 -1010 1 0 {name=p20 sig_type=std_logic lab=VBias}
+C {madvlsi/vsource.sym} 1560 -720 0 0 {name=VM4
+value="PULSE(0 1.8 0 1ns 1ns 2ns 6ns)"}
+C {madvlsi/gnd.sym} 1560 -690 0 0 {name=l8 lab=GND}
+C {lab_pin.sym} 1560 -750 3 1 {name=p22 sig_type=std_logic lab=A0}
+C {madvlsi/vsource.sym} 1980 -710 0 0 {name=VM5
+value="PULSE(0 1.8 0 1ns 1ns 11ns 24ns)"}
+C {madvlsi/gnd.sym} 1980 -680 0 0 {name=l9 lab=GND}
+C {lab_pin.sym} 1980 -740 3 1 {name=p23 sig_type=std_logic lab=A2}
+C {madvlsi/vsource.sym} 1560 -550 0 0 {name=VM9
+value="PULSE(0 1.8 0 1ns 1ns 5ns 12ns)"}
+C {madvlsi/gnd.sym} 1560 -520 0 0 {name=l11 lab=GND}
+C {lab_pin.sym} 1560 -580 3 1 {name=p11 sig_type=std_logic lab=A1}
+C {madvlsi/vsource.sym} 1980 -540 0 0 {name=VM10
+value="PULSE(0 1.8 0 1ns 1ns 23ns 48ns)"}
+C {madvlsi/gnd.sym} 1980 -510 0 0 {name=l14 lab=GND}
+C {lab_pin.sym} 1980 -570 3 1 {name=p27 sig_type=std_logic lab=A3}
 C {lab_pin.sym} 3190 -150 0 1 {name=p33 sig_type=std_logic lab=N15}
 C {lab_pin.sym} 3050 -150 0 1 {name=p34 sig_type=std_logic lab=N14}
 C {lab_pin.sym} 2910 -150 0 1 {name=p38 sig_type=std_logic lab=N13}
@@ -486,3 +433,24 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
+C {lab_pin.sym} 2630 -790 2 0 {name=p37 sig_type=std_logic lab=MUX0}
+C {lab_pin.sym} 2630 -770 2 0 {name=p39 sig_type=std_logic lab=MUX1}
+C {lab_pin.sym} 2630 -750 2 0 {name=p40 sig_type=std_logic lab=MUX2}
+C {lab_pin.sym} 2630 -730 2 0 {name=p41 sig_type=std_logic lab=MUX3}
+C {lab_pin.sym} 2630 -710 2 0 {name=p42 sig_type=std_logic lab=MUX4}
+C {lab_pin.sym} 2630 -690 2 0 {name=p43 sig_type=std_logic lab=MUX5}
+C {lab_pin.sym} 2630 -670 2 0 {name=p44 sig_type=std_logic lab=MUX6}
+C {lab_pin.sym} 2630 -650 2 0 {name=p45 sig_type=std_logic lab=MUX7}
+C {lab_pin.sym} 2630 -630 2 0 {name=p46 sig_type=std_logic lab=MUX8}
+C {lab_pin.sym} 2630 -610 2 0 {name=p47 sig_type=std_logic lab=MUX9}
+C {lab_pin.sym} 2630 -590 2 0 {name=p48 sig_type=std_logic lab=MUX10}
+C {lab_pin.sym} 2630 -570 2 0 {name=p49 sig_type=std_logic lab=MUX11}
+C {lab_pin.sym} 2630 -550 2 0 {name=p50 sig_type=std_logic lab=MUX12}
+C {lab_pin.sym} 2630 -530 2 0 {name=p51 sig_type=std_logic lab=MUX13}
+C {lab_pin.sym} 2630 -510 2 0 {name=p52 sig_type=std_logic lab=MUX14}
+C {lab_pin.sym} 2630 -490 2 0 {name=p53 sig_type=std_logic lab=MUX15}
+C {lab_pin.sym} 2460 -660 2 1 {name=p13 sig_type=std_logic lab=A0}
+C {lab_pin.sym} 2460 -640 2 1 {name=p14 sig_type=std_logic lab=A1}
+C {lab_pin.sym} 2460 -620 2 1 {name=p20 sig_type=std_logic lab=A2}
+C {lab_pin.sym} 2460 -600 2 1 {name=p21 sig_type=std_logic lab=A3}
+C {/home/madvlsi/SKY130-AY38910/DAC/decoder_4b.sym} 2480 -680 0 0 {name=x2}
