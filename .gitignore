@@ -2,3 +2,6 @@
 runs/
 asic/
 test.vcd
+xschem/simulation/share/
+xschem/simulation/checkpt*
+xschem/simulation/scratchpad*
