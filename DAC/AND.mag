@@ -1,0 +1,51 @@
+magic
+tech sky130A
+timestamp 1758518674
+<< locali >>
+rect 135 30 180 40
+rect 135 10 150 30
+rect 170 10 180 30
+rect 135 0 180 10
+<< viali >>
+rect -170 10 -150 30
+rect 150 10 170 30
+rect -105 -30 -85 -10
+<< metal1 >>
+rect -265 210 -245 310
+rect 160 210 180 310
+rect -265 55 -245 155
+rect 160 55 180 155
+rect -265 30 -140 40
+rect -265 20 -170 30
+rect -180 10 -170 20
+rect -150 10 -140 30
+rect -180 0 -140 10
+rect 140 30 180 40
+rect 140 10 150 30
+rect 170 10 180 30
+rect 140 0 180 10
+rect -115 -10 -75 0
+rect -115 -20 -105 -10
+rect -265 -30 -105 -20
+rect -85 -30 -75 -10
+rect -265 -40 -75 -30
+use inverter  inverter_0
+timestamp 1758462897
+transform 1 0 100 0 1 65
+box -115 -65 80 265
+use NAND  NAND_0
+timestamp 1758518536
+transform 1 0 -80 0 1 40
+box -185 -80 80 290
+<< labels >>
+rlabel metal1 180 20 180 20 3 Y
+port 3 e
+rlabel metal1 -265 -30 -265 -30 7 A
+port 1 w
+rlabel metal1 -265 30 -265 30 7 B
+port 2 w
+rlabel metal1 -265 105 -265 105 7 VN
+port 5 w
+rlabel metal1 -265 260 -265 260 7 VP
+port 4 w
+<< end >>

@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.7RC file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 N 1230 -180 1230 -120 {lab=#net1}
 N 1370 -180 1370 -120 {lab=#net2}
@@ -28,12 +27,12 @@ N 2630 -180 2630 -120 {lab=#net11}
 N 2490 -180 2570 -180 {lab=#net10}
 N 2770 -180 2770 -120 {lab=#net12}
 N 2630 -180 2710 -180 {lab=#net11}
-N 2910 -180 2910 -120 {lab=N13}
+N 2910 -180 2910 -120 {lab=#net13}
 N 2770 -180 2850 -180 {lab=#net12}
-N 3050 -180 3050 -120 {lab=N14}
-N 2910 -180 2990 -180 {lab=N13}
+N 3050 -180 3050 -120 {lab=#net14}
+N 2910 -180 2990 -180 {lab=#net13}
 N 3190 -180 3190 -120 {lab=N15}
-N 3050 -180 3130 -180 {lab=N14}
+N 3050 -180 3130 -180 {lab=#net14}
 N 1190 -90 1200 -90 {lab=MUX1}
 N 1190 -280 1190 -90 {lab=MUX1}
 N 1330 -90 1340 -90 {lab=MUX2}
@@ -65,41 +64,40 @@ N 2590 -280 2590 -90 {lab=MUX11}
 N 2730 -90 2740 -90 {lab=MUX12}
 N 2730 -280 2730 -90 {lab=MUX12}
 N 3190 -180 3270 -180 {lab=N15}
-N 1230 -60 1230 -20 {lab=PROBE1}
-N 1230 -20 3190 -20 {lab=PROBE1}
-N 3190 -60 3190 -20 {lab=PROBE1}
-N 3050 -60 3050 -20 {lab=PROBE1}
-N 2910 -60 2910 -20 {lab=PROBE1}
-N 2770 -60 2770 -20 {lab=PROBE1}
-N 2630 -60 2630 -20 {lab=PROBE1}
-N 2490 -60 2490 -20 {lab=PROBE1}
-N 2350 -60 2350 -20 {lab=PROBE1}
-N 2210 -60 2210 -20 {lab=PROBE1}
-N 2070 -60 2070 -20 {lab=PROBE1}
-N 1930 -60 1930 -20 {lab=PROBE1}
-N 1790 -60 1790 -20 {lab=PROBE1}
-N 1650 -60 1650 -20 {lab=PROBE1}
-N 1510 -60 1510 -20 {lab=PROBE1}
-N 1370 -60 1370 -20 {lab=PROBE1}
-N 1090 -180 1090 -120 {lab=#net13}
-N 1090 -180 1170 -180 {lab=#net13}
+N 1230 -60 1230 -20 {lab=#net15}
+N 1230 -20 3190 -20 {lab=#net15}
+N 3190 -60 3190 -20 {lab=#net15}
+N 3050 -60 3050 -20 {lab=#net15}
+N 2910 -60 2910 -20 {lab=#net15}
+N 2770 -60 2770 -20 {lab=#net15}
+N 2630 -60 2630 -20 {lab=#net15}
+N 2490 -60 2490 -20 {lab=#net15}
+N 2350 -60 2350 -20 {lab=#net15}
+N 2210 -60 2210 -20 {lab=#net15}
+N 2070 -60 2070 -20 {lab=#net15}
+N 1930 -60 1930 -20 {lab=#net15}
+N 1790 -60 1790 -20 {lab=#net15}
+N 1650 -60 1650 -20 {lab=#net15}
+N 1510 -60 1510 -20 {lab=#net15}
+N 1370 -60 1370 -20 {lab=#net15}
+N 1090 -180 1090 -120 {lab=#net16}
+N 1090 -180 1170 -180 {lab=#net16}
 N 1050 -90 1060 -90 {lab=MUX0}
 N 1050 -280 1050 -90 {lab=MUX0}
-N 1090 -60 1090 -20 {lab=PROBE1}
-N 1090 -20 1230 -20 {lab=PROBE1}
-N 1020 -180 1090 -180 {lab=#net13}
-N 3190 -20 3190 60 {lab=PROBE1}
-N 3190 60 3190 110 {lab=PROBE1}
-C {madvlsi/vsource.sym} 1460 -720 0 0 {name=Vdd
-value=1.8}
-C {madvlsi/gnd.sym} 1460 -690 0 0 {name=l1 lab=GND}
-C {madvlsi/vdd.sym} 1460 -750 0 0 {name=l5 lab=VDD}
-C {code_shown.sym} 1070 -510 0 0 {name=SPICE only_toplevel=false value="
-.param Tstep = 5u
-.tran 0.1u \{16*Tstep\}
+N 1090 -60 1090 -20 {lab=#net15}
+N 1090 -20 1230 -20 {lab=#net15}
+N 1020 -180 1090 -180 {lab=#net16}
+N 3190 -20 3190 60 {lab=#net15}
+N 3190 60 3190 110 {lab=#net15}
+C {code_shown.sym} 1070 -510 0 0 {name=SPICE only_toplevel=true lvs_ignore=true value="
+.include ~/MADVLSI/MP3/vtd.spice
+.dc Vin 0 15 1
+.control
+run
+plot mux0 mux1 mux2 mux3 mux4 mux5 mux6 mux7 mux8 mux9 mux10 mux11 mux12 mux13 mux14 mux15
+.endc
 .save all"
 }
-C {sky130_fd_pr/corner.sym} 1060 -660 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {madvlsi/resistor.sym} 1200 -180 3 1 {name=R1
 value=206
 m=1}
@@ -148,8 +146,6 @@ m=1}
 C {madvlsi/resistor.sym} 3300 -180 3 1 {name=R16
 value=71.1k
 m=1}
-C {madvlsi/vdd.sym} 3330 -180 1 1 {name=l3 lab=VDD}
-C {madvlsi/gnd.sym} 960 -180 1 1 {name=l4 lab=GND}
 C {madvlsi/nmos3.sym} 1090 -90 2 1 {name=M1
 L=0.15
 W=0.5
@@ -181,33 +177,20 @@ C {lab_pin.sym} 2870 -280 1 0 {name=p17 sig_type=std_logic lab=MUX13}
 C {lab_pin.sym} 3010 -280 1 0 {name=p18 sig_type=std_logic lab=MUX14}
 C {lab_pin.sym} 3150 -280 1 0 {name=p19 sig_type=std_logic lab=MUX15}
 C {lab_pin.sym} 1050 -280 1 0 {name=p12 sig_type=std_logic lab=MUX0}
-C {madvlsi/vsource.sym} 1560 -720 0 0 {name=VM4
-value="PULSE(0 1.8 0 1ns 1ns 2ns 6ns)"}
-C {madvlsi/gnd.sym} 1560 -690 0 0 {name=l8 lab=GND}
-C {lab_pin.sym} 1560 -750 3 1 {name=p22 sig_type=std_logic lab=A0}
-C {madvlsi/vsource.sym} 1980 -710 0 0 {name=VM5
-value="PULSE(0 1.8 0 1ns 1ns 11ns 24ns)"}
-C {madvlsi/gnd.sym} 1980 -680 0 0 {name=l9 lab=GND}
-C {lab_pin.sym} 1980 -740 3 1 {name=p23 sig_type=std_logic lab=A2}
-C {madvlsi/vsource.sym} 1560 -550 0 0 {name=VM9
-value="PULSE(0 1.8 0 1ns 1ns 5ns 12ns)"}
-C {madvlsi/gnd.sym} 1560 -520 0 0 {name=l11 lab=GND}
-C {lab_pin.sym} 1560 -580 3 1 {name=p11 sig_type=std_logic lab=A1}
-C {madvlsi/vsource.sym} 1980 -540 0 0 {name=VM10
-value="PULSE(0 1.8 0 1ns 1ns 23ns 48ns)"}
-C {madvlsi/gnd.sym} 1980 -510 0 0 {name=l14 lab=GND}
-C {lab_pin.sym} 1980 -570 3 1 {name=p27 sig_type=std_logic lab=A3}
-C {lab_pin.sym} 3190 -150 0 1 {name=p33 sig_type=std_logic lab=N15}
-C {lab_pin.sym} 3050 -150 0 1 {name=p34 sig_type=std_logic lab=N14}
-C {lab_pin.sym} 2910 -150 0 1 {name=p38 sig_type=std_logic lab=N13}
+C {lab_pin.sym} 3190 -150 0 1 {name=p33 sig_type=std_logic only_toplevel=true
+lvs_ignore=true lab=N15}
+C {lab_pin.sym} 3050 -150 0 1 {name=p34 sig_type=std_logic only_toplevel=true
+lvs_ignore=true lab=N14}
+C {lab_pin.sym} 2910 -150 0 1 {name=p38 sig_type=std_logic only_toplevel=true
+lvs_ignore=true lab=N13}
 C {madvlsi/resistor.sym} 990 -180 3 1 {name=R17
 value=500
 m=1}
 C {madvlsi/resistor.sym} 3190 140 2 1 {name=R18
 value=10k
 m=1}
-C {lab_pin.sym} 3190 50 0 0 {name=p35 sig_type=std_logic lab=PROBE1}
-C {lab_pin.sym} 3190 170 3 0 {name=p36 sig_type=std_logic lab=Vout}
+C {lab_pin.sym} 3190 50 0 0 {name=p35 sig_type=std_logic only_toplevel=true
+lvs_ignore=true lab=PROBE1}
 C {madvlsi/nmos3.sym} 1230 -90 2 1 {name=M2
 L=0.15
 W=0.5
@@ -449,8 +432,43 @@ C {lab_pin.sym} 2630 -550 2 0 {name=p50 sig_type=std_logic lab=MUX12}
 C {lab_pin.sym} 2630 -530 2 0 {name=p51 sig_type=std_logic lab=MUX13}
 C {lab_pin.sym} 2630 -510 2 0 {name=p52 sig_type=std_logic lab=MUX14}
 C {lab_pin.sym} 2630 -490 2 0 {name=p53 sig_type=std_logic lab=MUX15}
-C {lab_pin.sym} 2460 -660 2 1 {name=p13 sig_type=std_logic lab=A0}
-C {lab_pin.sym} 2460 -640 2 1 {name=p14 sig_type=std_logic lab=A1}
-C {lab_pin.sym} 2460 -620 2 1 {name=p20 sig_type=std_logic lab=A2}
-C {lab_pin.sym} 2460 -600 2 1 {name=p21 sig_type=std_logic lab=A3}
-C {/home/madvlsi/SKY130-AY38910/DAC/decoder_4b.sym} 2480 -680 0 0 {name=x2}
+C {decoder_4b.sym} 2480 -680 0 0 {name=x2}
+C {/home/veswaranandam/MADVLSI/MP3/vtd.sym} 2070 -710 0 0 {name=X1
+only_toplevel=true
+lvs_ignore=true}
+C {lab_pin.sym} 2110 -770 2 0 {name=p11 sig_type=std_logic only_toplevel=true
+lvs_ignore=true lab=A0}
+C {lab_pin.sym} 2110 -750 2 0 {name=p22 sig_type=std_logic only_toplevel=true
+lvs_ignore=true lab=A1}
+C {lab_pin.sym} 2110 -730 2 0 {name=p23 sig_type=std_logic only_toplevel=true
+lvs_ignore=true lab=A2}
+C {lab_pin.sym} 2110 -710 2 0 {name=p24 sig_type=std_logic only_toplevel=true
+lvs_ignore=true lab=A3}
+C {madvlsi/vsource.sym} 1940 -760 1 0 {name=Vin
+only_toplevel=true
+lvs_ignore=true
+value=0}
+C {madvlsi/vsource.sym} 1610 -580 0 0 {name=Vdd
+only_toplevel=true
+lvs_ignore=true
+value=1.8}
+C {lab_pin.sym} 1610 -550 0 0 {name=p25 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
+C {gnd.sym} 1700 -550 0 0 {name=l9 lab=GND only_toplevel=true lvs_ignore=true}
+C {madvlsi/vsource.sym} 1700 -580 0 0 {name=Vss
+only_toplevel=true
+lvs_ignore=true
+value=0}
+C {lab_pin.sym} 1700 -610 2 0 {name=p26 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
+C {lab_pin.sym} 1610 -610 0 0 {name=p27 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
+C {iopin.sym} 3330 -180 0 0 {name=p28 lab=VP}
+C {iopin.sym} 960 -180 2 0 {name=p29 lab=VN}
+C {lab_pin.sym} 2540 -800 0 0 {name=p30 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 2540 -470 0 0 {name=p31 sig_type=std_logic lab=VN}
+C {sky130_fd_pr/corner.sym} 1040 -690 0 0 {name=CORNER only_toplevel=true lvs_ignore=true corner=tt}
+C {lab_pin.sym} 1970 -710 0 0 {name=p32 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
+C {gnd.sym} 1910 -760 1 0 {name=l1 lab=GND only_toplevel=true lvs_ignore=true}
+C {ipin.sym} 2460 -660 0 0 {name=p13 sig_type=std_logic lab=A0}
+C {ipin.sym} 2460 -640 0 0 {name=p14 sig_type=std_logic lab=A1}
+C {ipin.sym} 2460 -620 0 0 {name=p20 sig_type=std_logic lab=A2}
+C {ipin.sym} 2460 -600 0 0 {name=p21 sig_type=std_logic lab=A3}
+C {opin.sym} 3190 170 1 0 {name=p54 sig_type=std_logic lab=Vout}

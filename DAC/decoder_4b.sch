@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.7RC file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 N -20 -80 40 -80 {lab=A0}
 N 160 -80 220 -80 {lab=A1}
@@ -17,7 +16,7 @@ N 40 0 40 3330 {lab=#net1}
 N 220 0 220 3330 {lab=#net2}
 N 390 0 390 3330 {lab=#net3}
 N 560 0 560 3330 {lab=#net4}
-N 40 100 730 100 {lab=#net1}
+N 40 100 720 100 {lab=#net1}
 N 220 140 720 140 {lab=#net2}
 N 390 180 720 180 {lab=#net3}
 N 560 220 720 220 {lab=#net4}
@@ -25,18 +24,15 @@ N -20 310 720 310 {lab=A0}
 N 220 350 720 350 {lab=#net2}
 N 390 390 720 390 {lab=#net3}
 N 560 430 720 430 {lab=#net4}
-N 40 500 730 500 {lab=#net1}
+N 40 500 720 500 {lab=#net1}
 N -20 690 720 690 {lab=A0}
 N -20 1090 720 1090 {lab=A0}
 N 40 880 720 880 {lab=#net1}
 N -20 1470 720 1470 {lab=A0}
 N 40 1280 720 1280 {lab=#net1}
-N -10 1900 730 1900 {lab=A0}
-N 50 1690 730 1690 {lab=#net1}
+N 50 1690 720 1690 {lab=#net1}
 N 40 1690 50 1690 {lab=#net1}
 N -20 1900 -10 1900 {lab=A0}
-N -10 2280 730 2280 {lab=A0}
-N 50 2090 730 2090 {lab=#net1}
 N 40 2090 50 2090 {lab=#net1}
 N -20 2280 -10 2280 {lab=A0}
 N -20 2680 720 2680 {lab=A0}
@@ -49,10 +45,6 @@ N 220 920 720 920 {lab=#net2}
 N 220 1130 720 1130 {lab=#net2}
 N 160 1320 720 1320 {lab=A1}
 N 160 1510 720 1510 {lab=A1}
-N 230 1730 730 1730 {lab=#net2}
-N 230 1940 730 1940 {lab=#net2}
-N 170 2130 730 2130 {lab=A1}
-N 170 2320 730 2320 {lab=A1}
 N 220 1730 230 1730 {lab=#net2}
 N 220 1940 230 1940 {lab=#net2}
 N 160 2130 170 2130 {lab=A1}
@@ -89,26 +81,17 @@ N 500 2590 720 2590 {lab=A3}
 N 500 2800 720 2800 {lab=A3}
 N 500 2990 720 2990 {lab=A3}
 N 500 3180 720 3180 {lab=A3}
-C {sky130_stdcells/inv_1.sym} 40 -40 1 0 {name=x50 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 220 -40 1 0 {name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 390 -40 1 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 560 -40 1 0 {name=x3 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 160 0 0 {name=x4 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 370 0 0 {name=x5 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 560 0 0 {name=x6 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 750 0 0 {name=x7 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 940 0 0 {name=x9 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 1150 0 0 {name=x10 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 1340 0 0 {name=x11 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 1530 0 0 {name=x12 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 1750 0 0 {name=x14 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 1960 0 0 {name=x15 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 2150 0 0 {name=x16 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 2340 0 0 {name=x17 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 2530 0 0 {name=x19 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 2740 0 0 {name=x20 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 2930 0 0 {name=x21 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and4_1.sym} 780 3120 0 0 {name=x22 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+N 230 1730 720 1730 {lab=#net2}
+N 230 1940 720 1940 {lab=#net2}
+N -10 1900 720 1900 {lab=A0}
+N 170 2130 720 2130 {lab=A1}
+N 50 2090 720 2090 {lab=#net1}
+N 170 2320 720 2320 {lab=A1}
+N -10 2280 720 2280 {lab=A0}
+N 560 -80 560 -50 {lab=A3}
+N 40 -80 40 -50 {lab=A0}
+N 220 -80 220 -50 {lab=A1}
+N 390 -80 390 -50 {lab=A2}
 C {iopin.sym} 840 160 0 0 {name=p4 lab=MUX0}
 C {iopin.sym} 840 370 0 0 {name=p5 lab=MUX1}
 C {iopin.sym} 840 560 0 0 {name=p7 lab=MUX2}
@@ -129,3 +112,63 @@ C {ipin.sym} -20 -120 1 0 {name=p21 lab=A0}
 C {ipin.sym} 160 -120 1 0 {name=p1 lab=A1}
 C {ipin.sym} 320 -120 1 0 {name=p2 lab=A2}
 C {ipin.sym} 500 -120 1 0 {name=p3 lab=A3}
+C {iopin.sym} 770 80 2 0 {name=p6 lab=VP}
+C {iopin.sym} 770 240 2 0 {name=p22 lab=VN}
+C {AND_4.sym} 760 160 0 0 {name=x8}
+C {AND_4.sym} 760 370 0 0 {name=x4}
+C {lab_pin.sym} 770 290 0 0 {name=p25 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 450 0 0 {name=p26 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 560 0 0 {name=x5}
+C {lab_pin.sym} 770 480 0 0 {name=p27 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 640 0 0 {name=p28 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 750 0 0 {name=x6}
+C {lab_pin.sym} 770 670 0 0 {name=p29 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 830 0 0 {name=p30 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 940 0 0 {name=x7}
+C {lab_pin.sym} 770 860 0 0 {name=p31 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1020 0 0 {name=p32 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1150 0 0 {name=x9}
+C {lab_pin.sym} 770 1070 0 0 {name=p33 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1230 0 0 {name=p34 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1340 0 0 {name=x10}
+C {lab_pin.sym} 770 1260 0 0 {name=p35 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1420 0 0 {name=p36 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1530 0 0 {name=x11}
+C {lab_pin.sym} 770 1450 0 0 {name=p37 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1610 0 0 {name=p38 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1750 0 0 {name=x12}
+C {lab_pin.sym} 770 1670 0 0 {name=p39 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1830 0 0 {name=p40 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1960 0 0 {name=x13}
+C {lab_pin.sym} 770 1880 0 0 {name=p41 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2040 0 0 {name=p42 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2150 0 0 {name=x14}
+C {lab_pin.sym} 770 2070 0 0 {name=p43 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2230 0 0 {name=p44 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2340 0 0 {name=x15}
+C {lab_pin.sym} 770 2260 0 0 {name=p45 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2420 0 0 {name=p46 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2530 0 0 {name=x16}
+C {lab_pin.sym} 770 2450 0 0 {name=p47 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2610 0 0 {name=p48 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2740 0 0 {name=x17}
+C {lab_pin.sym} 770 2660 0 0 {name=p49 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2820 0 0 {name=p50 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2930 0 0 {name=x18}
+C {lab_pin.sym} 770 2850 0 0 {name=p51 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 3010 0 0 {name=p52 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 3120 0 0 {name=x19}
+C {lab_pin.sym} 770 3040 0 0 {name=p53 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 3200 0 0 {name=p54 sig_type=std_logic lab=VN}
+C {inverter.sym} 560 -30 1 0 {name=X3}
+C {lab_pin.sym} 580 -30 2 0 {name=p55 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 540 -30 0 0 {name=p56 sig_type=std_logic lab=VN}
+C {inverter.sym} 390 -30 1 0 {name=X2}
+C {lab_pin.sym} 410 -30 2 0 {name=p57 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 370 -30 0 0 {name=p58 sig_type=std_logic lab=VN}
+C {inverter.sym} 220 -30 1 0 {name=X1}
+C {lab_pin.sym} 240 -30 2 0 {name=p59 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 200 -30 0 0 {name=p60 sig_type=std_logic lab=VN}
+C {inverter.sym} 40 -30 1 0 {name=X20}
+C {lab_pin.sym} 60 -30 2 0 {name=p61 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 20 -30 0 0 {name=p62 sig_type=std_logic lab=VN}
