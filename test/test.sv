@@ -28,7 +28,7 @@ test_core tb(
     .din        ( din       )
 );
 
-jt49_bus uut( // note that input ports are not multiplexed
+digital_core uut( // note that input ports are not multiplexed
     .rst_n      ( rst_n     ),
     .clk        ( clk       ),    // signal on positive edge
     .clk_en     ( cen       ),    // clock enable on negative edge

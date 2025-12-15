@@ -1,0 +1,18 @@
+This is a spice folder that xyce will run in
+That's why it has the sky130 PDK and all the extracted/behavioral spice files. The modified PDK is at combined (/usr/local/share/pdk/sky130A/libs.tech/combined in a normal instalation). The extracted/behavioral files are in ext/.
+
+The output file will also show up in here.
+
+The device model path has been modified to be relative to this directory.
+
+From xschem, the spice netlist has to be generated in this directory. Running from xschem won't work. You need to make a cli at this directory and run manually with the xyce tool.
+
+EDITS AFTER GENERATION:
+
+The line:
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+Should be:
+.lib share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+This directory is about 8 gigs. so not very light. There's a limit of 50 gigs when using the supercomputer workspace.
+

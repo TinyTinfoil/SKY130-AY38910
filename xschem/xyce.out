@@ -1,0 +1,654 @@
+Failed: /software/Xyce/Parallel/bin/Xyce /home/veswaranandam/.xschem/simulations/testbench_postbehavioral.spice
+stderr:
+Simulation aborted due to error.  There are 0 MSG_FATAL errors and 5 MSG_ERROR
+ errors
+
+
+*** Xyce Abort ***
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+data:
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce DEVELOPMENT-202512021043-(Release-7.10.0-104-g72f886ee)-opensource
+***** Date: Sat Dec 13 04:32:59 EST 2025
+
+
+***** Executing netlist /home/veswaranandam/.xschem/simulations/testbench_postbehavioral.spice
+
+***** Reading and parsing netlist...
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_global.spice
+ at or near line 22
+ SCALE:  duplicate PARSER parameter.  Using the first value found = 1.0u
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/all.spice at or near
+ line 29
+ SCALE:  duplicate PARSER parameter.  Using the first value found = 1.0u
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/all.spice at or near
+ line 30
+ SCALE:  duplicate PARSER parameter.  Using the first value found = 1.0u
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25724
+ Device model X1:XFILLER_52_29:X0:PHIGHVT_MODEL.36: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25724
+ Device model X1:XFILLER_52_29:X0:PHIGHVT_MODEL.36: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13834
+ Device model X1:XFILLER_52_29:X1:NSHORT_MODEL.36: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13834
+ Device model X1:XFILLER_52_29:X1:NSHORT_MODEL.36: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25604
+ Device model X1:XFILLER_13_133:X0:PHIGHVT_MODEL.35: Model card specifies
+ BSIM4 version 4.5 which is older than the oldest version supported in Xyce
+ (4.6.1).  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25604
+ Device model X1:XFILLER_13_133:X0:PHIGHVT_MODEL.35: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13719
+ Device model X1:XFILLER_13_133:X1:NSHORT_MODEL.35: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13719
+ Device model X1:XFILLER_13_133:X1:NSHORT_MODEL.35: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25485
+ Device model X1:XFILLER_9_137:X0:PHIGHVT_MODEL.34: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25485
+ Device model X1:XFILLER_9_137:X0:PHIGHVT_MODEL.34: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13608
+ Device model X1:XFILLER_9_137:X1:NSHORT_MODEL.34: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13608
+ Device model X1:XFILLER_9_137:X1:NSHORT_MODEL.34: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25846
+ Device model X1:XFILLER_13_177:X0:PHIGHVT_MODEL.37: Model card specifies
+ BSIM4 version 4.5 which is older than the oldest version supported in Xyce
+ (4.6.1).  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25846
+ Device model X1:XFILLER_13_177:X0:PHIGHVT_MODEL.37: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13955
+ Device model X1:XFILLER_13_177:X1:NSHORT_MODEL.37: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13955
+ Device model X1:XFILLER_13_177:X1:NSHORT_MODEL.37: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25604
+ Device model X1:XFILLER_3_45:X0:PHIGHVT_MODEL.35: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25604
+ Device model X1:XFILLER_3_45:X0:PHIGHVT_MODEL.35: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13719
+ Device model X1:XFILLER_3_45:X1:NSHORT_MODEL.35: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13719
+ Device model X1:XFILLER_3_45:X1:NSHORT_MODEL.35: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1270_:X0:NSHORT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1270_:X0:NSHORT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1270_:X1:PHIGHVT_MODEL.32: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1270_:X1:PHIGHVT_MODEL.32: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1270_:X2:PHIGHVT_MODEL.32: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1270_:X2:PHIGHVT_MODEL.32: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1270_:X3:PHIGHVT_MODEL.32: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1270_:X3:PHIGHVT_MODEL.32: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1270_:X4:NSHORT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1270_:X4:NSHORT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1270_:X5:NSHORT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1270_:X5:NSHORT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1270_:X6:PHIGHVT_MODEL.32: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1270_:X6:PHIGHVT_MODEL.32: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1270_:X7:NSHORT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1270_:X7:NSHORT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25485
+ Device model X1:XFILLER_3_89:X0:PHIGHVT_MODEL.34: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25485
+ Device model X1:XFILLER_3_89:X0:PHIGHVT_MODEL.34: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13608
+ Device model X1:XFILLER_3_89:X1:NSHORT_MODEL.34: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 13608
+ Device model X1:XFILLER_3_89:X1:NSHORT_MODEL.34: Given pbswgd is less than
+ 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X0:NSHORT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X0:NSHORT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice
+ at or near line 303
+ Device model X1:X_1606_:X1:SKY130_FD_PR__SPECIAL_NFET_01V8__MODEL.1: Model
+ card specifies BSIM4 version 4.5 which is older than the oldest version
+ supported in Xyce (4.6.1).  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice
+ at or near line 303
+ Device model X1:X_1606_:X1:SKY130_FD_PR__SPECIAL_NFET_01V8__MODEL.1: Given
+ pbswgd is less than 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1606_:X2:NSHORT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1606_:X2:NSHORT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X3:NSHORT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X3:NSHORT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X4:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X4:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1606_:X5:PHIGHVT_MODEL.32: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1606_:X5:PHIGHVT_MODEL.32: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice
+ at or near line 303
+ Device model X1:X_1606_:X6:SKY130_FD_PR__SPECIAL_NFET_01V8__MODEL.1: Model
+ card specifies BSIM4 version 4.5 which is older than the oldest version
+ supported in Xyce (4.6.1).  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice
+ at or near line 303
+ Device model X1:X_1606_:X6:SKY130_FD_PR__SPECIAL_NFET_01V8__MODEL.1: Given
+ pbswgd is less than 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X7:NSHORT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X7:NSHORT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1606_:X8:PHIGHVT_MODEL.32: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 25271
+ Device model X1:X_1606_:X8:PHIGHVT_MODEL.32: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 26208
+ Device model X1:X_1606_:X9:PHIGHVT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 26208
+ Device model X1:X_1606_:X9:PHIGHVT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X10:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X10:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1606_:X11:NSHORT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1606_:X11:NSHORT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X12:NSHORT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X12:NSHORT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X13:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X13:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X14:NSHORT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X14:NSHORT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice
+ at or near line 303
+ Device model X1:X_1606_:X15:SKY130_FD_PR__SPECIAL_NFET_01V8__MODEL.1: Model
+ card specifies BSIM4 version 4.5 which is older than the oldest version
+ supported in Xyce (4.6.1).  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice
+ at or near line 303
+ Device model X1:X_1606_:X15:SKY130_FD_PR__SPECIAL_NFET_01V8__MODEL.1: Given
+ pbswgd is less than 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X16:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X16:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X17:NSHORT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X17:NSHORT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X18:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X18:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X19:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X19:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X20:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X20:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 26208
+ Device model X1:X_1606_:X21:PHIGHVT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 26208
+ Device model X1:X_1606_:X21:PHIGHVT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X22:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X22:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X23:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X23:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1606_:X24:NSHORT_MODEL.40: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 14314
+ Device model X1:X_1606_:X24:NSHORT_MODEL.40: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice
+ at or near line 303
+ Device model X1:X_1606_:X25:SKY130_FD_PR__SPECIAL_NFET_01V8__MODEL.1: Model
+ card specifies BSIM4 version 4.5 which is older than the oldest version
+ supported in Xyce (4.6.1).  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/corners/../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice
+ at or near line 303
+ Device model X1:X_1606_:X25:SKY130_FD_PR__SPECIAL_NFET_01V8__MODEL.1: Given
+ pbswgd is less than 0.1. Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X26:NSHORT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X26:NSHORT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X27:PHIGHVT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 27131
+ Device model X1:X_1606_:X27:PHIGHVT_MODEL.48: Given pbswgd is less than 0.1.
+ Pbswgd is set to 0.1
+Netlist warning in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_fet.spice
+ at or near line 15247
+ Device model X1:X_1606_:X28:NSHORT_MODEL.48: Model card specifies BSIM4
+ version 4.5 which is older than the oldest version supported in Xyce (4.6.1).
+  Using oldest version available.
+ 
+Maximum warning count has been exceeded and will no longer be displayed
+Netlist error in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_diodes.spice
+ at or near line 614
+ Model is required for device DSKY130_FD_PR__DIODE_PW2ND_05V5 and no valid
+ model card found.
+Netlist error in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_diodes.spice
+ at or near line 614
+ Model is required for device DSKY130_FD_PR__DIODE_PW2ND_05V5 and no valid
+ model card found.
+Netlist error in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_diodes.spice
+ at or near line 614
+ Model is required for device DSKY130_FD_PR__DIODE_PW2ND_05V5 and no valid
+ model card found.
+Netlist error in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_diodes.spice
+ at or near line 614
+ Model is required for device DSKY130_FD_PR__DIODE_PW2ND_05V5 and no valid
+ model card found.
+Netlist error in file
+ /usr/local/share/pdk/sky130A/libs.tech/combined/continuous/models_diodes.spice
+ at or near line 614
+ Model is required for device DSKY130_FD_PR__DIODE_PW2ND_05V5 and no valid
+ model card found.
+Simulation aborted due to error.  There are 0 MSG_FATAL errors and 5 MSG_ERROR
+ errors
+*** Xyce Abort ***

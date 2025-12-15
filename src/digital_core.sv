@@ -23,14 +23,14 @@
 
 // This is a wrapper with the BDIR/BC1 pins
 /* verilator coverage_off */
-`timescale 1ns / 1ps
+// `timescale 1ns / 1ps
 `include "src/jt49_cen.v"
 `include "src/jt49_div.v"
 `include "src/jt49_eg.v"
 `include "src/jt49_exp.v"
 `include "src/jt49_noise.v"
 `include "src/jt49.v"
-module jt49_bus ( // note that input ports are not multiplexed
+module digital_core ( // note that input ports are not multiplexed
     input            rst_n,
     input            clk,    // signal on positive edge
     input            clk_en /* synthesis direct_enable = 1 */,

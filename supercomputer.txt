@@ -1,0 +1,117 @@
+Change lib path from 
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice
+to 
+/home/<user>/sky130A/libs.tech/combined/sky130.lib.spice
+
+Make the xyce program with mpi and put it home
+
+Change the include paths for the actual test_core and jt49_bus as well.
+
+After that, target xyce + that spice file and it should work.
+#!/bin/sh
+SRCDIR=$HOME/Trilinos12.12/Trilinos-trilinos-release-12-12-1
+ARCHDIR=$HOME/XyceLibs/Parallel
+FLAGS="-O3 -fPIC"
+cmake \
+-G "Unix Makefiles" \
+-DCMAKE_C_COMPILER=mpicc \
+-DCMAKE_CXX_COMPILER=mpic++ \
+-DCMAKE_Fortran_COMPILER=mpif77 \
+-DCMAKE_CXX_FLAGS="$FLAGS" \
+-DCMAKE_C_FLAGS="$FLAGS" \
+-DCMAKE_Fortran_FLAGS="$FLAGS" \
+-DCMAKE_INSTALL_PREFIX=$ARCHDIR \
+-DCMAKE_MAKE_PROGRAM="make" \
+-DTrilinos_ENABLE_NOX=ON \
+  -DNOX_ENABLE_LOCA=ON \
+-DTrilinos_ENABLE_EpetraExt=ON \
+  -DEpetraExt_BUILD_BTF=ON \
+  -DEpetraExt_BUILD_EXPERIMENTAL=ON \
+  -DEpetraExt_BUILD_GRAPH_REORDERINGS=ON \
+-DTrilinos_ENABLE_TrilinosCouplings=ON \
+-DTrilinos_ENABLE_Ifpack=ON \
+-DTrilinos_ENABLE_Isorropia=ON \
+-DTrilinos_ENABLE_AztecOO=ON \
+-DTrilinos_ENABLE_Belos=ON \
+-DTrilinos_ENABLE_Teuchos=ON \
+-DTrilinos_ENABLE_COMPLEX_DOUBLE=ON \
+-DTrilinos_ENABLE_Amesos=ON \
+ -DAmesos_ENABLE_KLU=ON \
+-DTrilinos_ENABLE_Amesos2=ON \
+ -DAmesos2_ENABLE_KLU2=ON \
+ -DAmesos2_ENABLE_Basker=ON \
+-DTrilinos_ENABLE_Sacado=ON \
+-DTrilinos_ENABLE_Stokhos=ON \
+-DTrilinos_ENABLE_Kokkos=ON \
+-DTrilinos_ENABLE_Zoltan=ON \
+-DTrilinos_ENABLE_ALL_OPTIONAL_PACKAGES=OFF \
+-DTrilinos_ENABLE_CXX11=ON \
+-DTPL_ENABLE_AMD=ON \
+-DAMD_LIBRARY_DIRS="/usr/lib;$HOME/SuiteSparse/SuiteSparse-7.12.1/lib" \
+-DTPL_AMD_INCLUDE_DIRS="/usr/include/suitesparse;$HOME/SuiteSparse/SuiteSparse-7.12.1/include" \
+-DTPL_ENABLE_BLAS=ON \
+-DTPL_ENABLE_LAPACK=ON \
+-DTPL_ENABLE_MPI=ON \
+$SRCDIR
+
+#cd ~ #test for bug
+#mpicc -o testBUG967 testBUG967.c
+#mpirun -np 2 ./testBUG967
+#mpirun -np 128 $HOME/XyceInstall/Parallel/bin/Xyce testbench_post.spice
+
+salloc --constraint=x86_64 -c 8 --mem=30G
+# --ntasks=128 for parallel &ib&mpi
+
+#module avail
+module purge
+module load openblas/0.3.26 netlib-lapack/3.11.0 openmpi/5.0.3 fftw/3.3.10 flex/2.6.4-kmlbnzq
+
+#suitesparse
+mkdir $HOME/SuiteSparse
+cd $HOME/SuiteSparse
+tar xzf $HOME/Downloads/SuiteSparse-7.12.1.tar.gz
+cd SuiteSparse-7.12.1
+make local
+make install
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/SuiteSparse/SuiteSparse-7.12.1/lib/pkgconfig
+
+mkdir $HOME/Trilinos12.12
+cd $HOME/Trilinos12.12
+tar xzf $HOME/Downloads/Trilinos-trilinos-release-12-12-1.tar.gz
+
+mkdir $HOME/build_trilinos
+cd $HOME/build_trilinos
+$HOME/reconfigure_trilinos.sh
+
+
+make -j 8
+make install
+
+mkdir $HOME/Xyce
+cd $HOME/Xyce
+tar xzf $HOME/Downloads/Xyce-7.10.0.tar.gz
+
+mkdir $HOME/build_xyce
+cd $HOME/build_xyce
+$HOME/reconfigure_xyce.sh
+
+make -j 8
+make install
+
+cd ~
+tar zxvf simulation.tar.gz
+
+
+#!/bin/bash
+#SBATCH --time=1:00:00
+#SBATCH --constraint=x86_64&mpi
+#SBATCH --nodes=1
+#SBATCH --ntasks=192
+#SBATCH --exclusive
+#SBATCH --mem=500G
+
+module purge
+module load openblas/0.3.26 netlib-lapack/3.11.0 openmpi/5.0.3 fftw/3.3.10 flex/2.6.4-kmlbnzq
+LD_LIBRARY_PATH=/modules/spack/packages/linux-ubuntu24.04-x86_64/gcc-13.2.0/openmpi-5.0.3-bj572zbkduba5ueea4uwnhhgbi422h55/lib:/home/veswaranandam_olin_edu/SuiteSparse/SuiteSparse-7.12.1/lib:/home/veswaranandam_olin_edu/XyceInstall/Parallel/lib
+cd $HOME/simulation
+mpirun -np 192 $HOME/XyceInstall/Parallel/bin/Xyce xyce_test.spice

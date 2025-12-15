@@ -1,44 +1,26 @@
 ** sch_path: /home/veswaranandam/SKY130-AY38910/xschem/scratchpad.sch
 **.subckt scratchpad
 X2 CLK cen VRST bdir bc1 bc2 din7 din6 din5 din4 din3 din2 din1 din0 test_core
-C27 din7 0 1f m=1
-C26 din6 0 1f m=1
-C25 din5 0 1f m=1
-C24 din4 0 1f m=1
-C23 din3 0 1f m=1
-C22 din2 0 1f m=1
-C21 din1 0 1f m=1
-C20 din0 0 1f m=1
-C1 bc1 0 1f m=1
-C2 bc2 0 1f m=1
-C3 bdir 0 1f m=1
-C4 cen 0 1f m=1
+C27 din7 0 1f
+C26 din6 0 1f
+C25 din5 0 1f
+C24 din4 0 1f
+C23 din3 0 1f
+C22 din2 0 1f
+C21 din1 0 1f
+C20 din0 0 1f
+C1 bc1 0 1f
+C2 bc2 0 1f
+C3 bdir 0 1f
+C4 cen 0 1f
 **** begin user architecture code
 
 
 .param VDD=1.8
-.include ~/SKY130-AY38910/xschem/jt49_bus.spice
-.include ~/SKY130-AY38910/xschem/test_core.spice
-.control
-
-**** change default parameters of auto adc/dac bridges
-pre_set auto_bridge_d_in =
-+ ( ".model auto_adc adc_bridge(
-+   in_low = '0.9 * 1.8 / 2' in_high = '1.1 * 1.8 / 2'
-+   rise_delay=1e-11 fall_delay=1e-11 )"
-+ "auto_bridge%d [ %s ] [ %s ] auto_adc" )
-
-pre_set auto_bridge_d_out =
-+ ( ".model auto_dac dac_bridge(
-+   out_low = 0 out_high = 1.8
-+   t_rise=1e-11 t_fall=1e-11 )"
-+ "auto_bridge%d [ %s ] [ %s ] auto_dac" )
-
-*  save all
-  tran 10ps 3ms
-*  remzerovec
-*  write tb_counter_wrapper.raw
-.endc
+*.include ext/jt49_bus.spice
+.include ext/test_core.spice
+.tran 10ns 3ms
+.print tran format=raw file=scratchpad.raw v(din*) v(CLK) v(cen)
 
 
 **** end user architecture code

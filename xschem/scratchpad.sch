@@ -16,28 +16,10 @@ N 660 170 670 170 {lab=cen}
 N 670 170 680 170 {lab=cen}
 C {code_shown.sym} -570 -280 0 0 {name=COMMANDS only_toplevel=false value="
 .param VDD=1.8
-.include ~/SKY130-AY38910/xschem/jt49_bus.spice
-.include ~/SKY130-AY38910/xschem/test_core.spice
-.control
-
-**** change default parameters of auto adc/dac bridges
-pre_set auto_bridge_d_in =
-+ ( \\".model auto_adc adc_bridge(
-+   in_low = '0.9 * 1.8 / 2' in_high = '1.1 * 1.8 / 2'
-+   rise_delay=1e-11 fall_delay=1e-11 )\\"
-+ \\"auto_bridge%d [ %s ] [ %s ] auto_adc\\" )
-
-pre_set auto_bridge_d_out =
-+ ( \\".model auto_dac dac_bridge(
-+   out_low = 0 out_high = 1.8
-+   t_rise=1e-11 t_fall=1e-11 )\\"
-+ \\"auto_bridge%d [ %s ] [ %s ] auto_dac\\" )
-
-*  save all
-  tran 10ps 3ms
-*  remzerovec
-*  write tb_counter_wrapper.raw
-.endc
+*.include ext/jt49_bus.spice
+.include ext/test_core.spice
+.tran 10ns 3ms
+.print tran format=raw file=scratchpad.raw v(din*) v(CLK) v(cen)
 "}
 C {test_core_post.sym} 570 160 0 0 {name=X2 model=test_core
 }

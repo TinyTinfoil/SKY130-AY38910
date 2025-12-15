@@ -1,6 +1,6 @@
 filename_fpga_fpga = src/top
 pcf_file = fpga/iceBlinkPico.pcf
-src_files = src/jt49_bus.sv
+src_files = src/digital_core.sv
 ############################# FPGA flow
 build:
 	yosys -p "synth_ice40 -top top -json $(filename_fpga).json -spram" $(filename_fpga).sv
@@ -11,7 +11,7 @@ prog: #for sram
 	sudo chmod -R 777 /dev/bus/usb/ #for WSL
 	dfu-util --device 1d50:6146 --alt 0 -D $(filename_fpga).bin -R
 
-clean: clean-asic clean-test
+clean: clean-asic clean-verilog
 	rm -rf $(filename_fpga).blif $(filename_fpga).asc $(filename_fpga).json $(filename_fpga).bin
 
 pnr-gui:
@@ -46,7 +46,7 @@ clean-verilog:
 view-xschem:
 	cd xschem && xschem testbench.sch
 build-xschem:
-	iverilog -o xschem/jt49_bus src/jt49_bus.sv
+	iverilog -o xschem/digital_core src/digital_core.sv
 	iverilog -o xschem/test_core test/test_core.sv
 
 ############################ Python venv
