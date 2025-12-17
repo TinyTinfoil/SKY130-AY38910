@@ -1,0 +1,108 @@
+
+X0 a_850_n40# decoder_0/MUX5 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X1 a_9700_3952# a_9870_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X2 a_6300_3360# a_6130_n40# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X3 a_2040_2640# a_2210_n40# sky130_fd_pr__res_generic_po w=0.35 l=11.25
+X4 a_1700_2780# a_1520_n170# sky130_fd_pr__res_generic_po w=0.35 l=11.95
+X5 VDD a_13610_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X6 a_10040_3952# a_10210_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X7 a_9700_3952# a_9530_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X8 a_7150_3810# a_6980_3360# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X9 a_6640_3360# a_6470_n40# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X10 a_3920_2070# a_4090_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X11 a_160_n170# a_320_n350# sky130_fd_pr__res_generic_po w=0.35 l=2.97
+X12 a_14296_2070# a_14126_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X13 a_13440_3952# a_13610_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X14 a_11060_3952# a_10890_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X15 a_10380_3952# a_10550_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X16 a_670_n350# decoder_0/MUX6 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X17 a_7490_3810# a_7320_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X18 a_6980_3360# a_6810_n40# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X19 a_510_n170# a_670_n350# sky130_fd_pr__res_generic_po w=0.35 l=5.94
+X20 a_14986_2070# Vout sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X21 a_14646_2070# a_14466_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X22 a_13956_2070# a_14126_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X23 a_510_n170# decoder_0/MUX3 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X24 a_10720_3952# a_10890_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X25 a_n40_n350# decoder_0/MUX2 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X26 a_7150_3810# a_7320_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X27 a_6640_3360# a_6810_n40# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X28 a_4260_2070# a_4090_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X29 a_14986_2070# a_14816_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X30 a_3230_2070# a_3060_n170# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X31 a_320_n350# a_510_n170# sky130_fd_pr__res_generic_po w=0.35 l=4.27
+X32 a_14296_2070# a_14466_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X33 a_13956_2070# a_n200_n300# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X34 a_3060_n170# decoder_0/MUX11 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X35 a_11060_3952# a_11230_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X36 a_10720_3952# a_10550_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X37 a_8170_3810# a_8000_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X38 a_7490_3810# a_7660_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X39 a_3570_2070# a_3400_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X40 a_670_n350# a_850_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.7
+X41 a_14646_2070# a_14816_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X42 a_12080_3952# a_11910_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X43 a_11400_3952# a_11570_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X44 a_320_n350# decoder_0/MUX4 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X45 a_n200_n170# decoder_0/MUX0 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X46 a_2380_2640# decoder_0/MUX10 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X47 a_7830_3810# a_8000_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X48 a_4260_2070# a_4430_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X49 a_3920_2070# a_3740_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X50 a_3230_2070# a_3400_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X51 a_1520_n170# decoder_0/MUX8 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X52 a_11400_3952# a_11230_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X53 a_8170_3810# a_8340_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X54 a_7830_3810# a_7660_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X55 a_5280_3534# a_5110_n40# sky130_fd_pr__res_generic_po w=0.35 l=15.72
+X56 a_4600_3534# a_4770_n40# sky130_fd_pr__res_generic_po w=0.35 l=15.72
+X57 a_1020_1552# a_1180_n350# sky130_fd_pr__res_generic_po w=0.35 l=5.81
+X58 a_1860_n170# decoder_0/MUX9 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X59 a_3570_2070# a_3740_n40# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X60 a_8850_3810# decoder_0/MUX15 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X61 a_12080_3952# a_12250_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X62 a_11740_3952# a_11570_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X63 a_9020_3952# a_9190_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X64 a_8510_3810# a_8680_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X65 a_4940_3534# a_5110_n40# sky130_fd_pr__res_generic_po w=0.35 l=15.72
+X66 a_4600_3534# a_4430_n40# sky130_fd_pr__res_generic_po w=0.35 l=15.72
+X67 a_1020_1552# a_850_n40# sky130_fd_pr__res_generic_po w=0.35 l=5.81
+X68 a_1180_n350# decoder_0/MUX7 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X69 a_6980_3360# decoder_0/MUX14 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X70 a_12420_3952# a_12590_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X71 a_n200_n170# a_n40_n350# sky130_fd_pr__res_generic_po w=0.35 l=1.75
+X72 a_9020_3952# a_8850_3810# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X73 a_8510_3810# a_8340_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X74 a_5280_3534# a_5440_n170# sky130_fd_pr__res_generic_po w=0.35 l=15.72
+X75 a_4940_3534# a_4770_n40# sky130_fd_pr__res_generic_po w=0.35 l=15.72
+X76 a_160_n170# decoder_0/MUX1 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X77 a_1360_2070# a_1180_n350# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X78 a_12420_3952# a_12250_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X79 a_11740_3952# a_11910_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X80 a_5440_n170# decoder_0/MUX13 a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X81 a_9360_3952# a_9190_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X82 a_8850_3810# a_8680_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.1
+X83 a_5620_3360# a_5790_n40# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X84 a_2890_2750# a_3060_n170# sky130_fd_pr__res_generic_po w=0.35 l=11.79
+X85 a_2550_2750# a_2380_2640# sky130_fd_pr__res_generic_po w=0.35 l=11.79
+X86 a_13100_3952# a_13270_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X87 a_12760_3952# a_12590_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X88 a_4430_n40# a_4330_n220# a_n200_n300# GND sky130_fd_pr__nfet_01v8 ad=0.25 pd=2 as=0.25 ps=2 w=0.5 l=0.15
+X89 a_5960_3360# a_6130_n40# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X90 a_5620_3360# a_5440_n170# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X91 a_1360_2070# a_1520_n170# sky130_fd_pr__res_generic_po w=0.35 l=8.4
+X92 a_2040_2640# a_1860_n170# sky130_fd_pr__res_generic_po w=0.35 l=11.25
+X93 GND a_n200_n170# sky130_fd_pr__res_generic_po w=0.35 l=3.35
+X94 a_2890_2750# a_2720_n38# sky130_fd_pr__res_generic_po w=0.35 l=11.79
+X95 a_13100_3952# a_12930_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X96 a_10040_3952# a_9870_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X97 a_9360_3952# a_9530_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X98 a_6300_3360# a_6470_n40# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X99 a_5960_3360# a_5790_n40# sky130_fd_pr__res_generic_po w=0.35 l=14.85
+X100 a_2380_2640# a_2210_n40# sky130_fd_pr__res_generic_po w=0.35 l=11.25
+X101 a_n40_n350# a_160_n170# sky130_fd_pr__res_generic_po w=0.35 l=2.1
+X102 a_1700_2780# a_1860_n170# sky130_fd_pr__res_generic_po w=0.35 l=11.95
+X103 a_2550_2750# a_2720_n38# sky130_fd_pr__res_generic_po w=0.35 l=11.79
+X104 a_13440_3952# a_13270_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X105 a_12760_3952# a_12930_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81
+X106 a_10380_3952# a_10210_n40# sky130_fd_pr__res_generic_po w=0.35 l=17.81

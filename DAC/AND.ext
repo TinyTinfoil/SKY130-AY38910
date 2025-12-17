@@ -19,29 +19,29 @@ node "A" 14 186.303 -530 -60 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "B" 14 113.063 -530 60 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 13200 660 0 0 0 0 0 0 0 0 0 0
 node "Y" 15 124.225 360 40 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7200 340 6400 320 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "Y" "B" 7.69392
-cap "VP" "VN" 11
-cap "B" "VN" 22
-cap "Y" "m1_320_420#" 0.403403
-cap "B" "A" 96.6496
-cap "m1_320_420#" "m1_320_110#" 11
-cap "Y" "m1_320_110#" 25.8744
 cap "VP" "m1_320_420#" 10.2326
-cap "m1_320_110#" "VN" 10.2326
-cap "NAND_0/VN" "NAND_0/VP" -27.7526
-cap "inverter_0/Y" "NAND_0/VP" 0.829066
-cap "NAND_0/VP" "NAND_0/Y" 3.55294
-cap "NAND_0/VN" "inverter_0/Y" 13.4507
+cap "B" "VN" 22
+cap "Y" "m1_320_110#" 25.8744
+cap "Y" "m1_320_420#" 0.403403
+cap "Y" "B" 7.69392
+cap "m1_320_420#" "m1_320_110#" 11
+cap "B" "A" 96.6496
+cap "VP" "VN" 11
+cap "VN" "m1_320_110#" 10.2326
 cap "NAND_0/VN" "NAND_0/Y" 31.9887
-cap "NAND_0/VP" "NAND_0/A" 3.96594
-cap "NAND_0/VN" "NAND_0/B" 95.8028
-cap "NAND_0/VN" "NAND_0/A" 23.8714
-cap "inverter_0/Y" "NAND_0/Y" 34.132
-cap "inverter_0/Y" "NAND_0/B" -1.8814
+cap "NAND_0/B" "NAND_0/VN" 95.8028
+cap "inverter_0/Y" "NAND_0/VP" 0.829066
+cap "NAND_0/VN" "NAND_0/VP" -27.7526
+cap "inverter_0/Y" "NAND_0/VN" 13.4507
+cap "NAND_0/A" "NAND_0/Y" 12.3781
+cap "NAND_0/B" "NAND_0/A" 1.43583
+cap "NAND_0/A" "NAND_0/VP" 3.96594
 cap "inverter_0/Y" "NAND_0/A" 0.44419
-cap "NAND_0/Y" "NAND_0/B" 5.44136
-cap "NAND_0/Y" "NAND_0/A" 12.3781
-cap "NAND_0/A" "NAND_0/B" 1.43583
+cap "NAND_0/B" "NAND_0/Y" 5.44136
+cap "NAND_0/A" "NAND_0/VN" 23.8714
+cap "inverter_0/Y" "NAND_0/Y" 34.132
+cap "NAND_0/VP" "NAND_0/Y" 3.55294
+cap "inverter_0/Y" "NAND_0/B" -1.8814
 merge "inverter_0/VN" "m1_320_110#" -348.361 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -22000 -1420 0 0 0 0 0 0 0 0 0 0
 merge "m1_320_110#" "NAND_0/VN"
 merge "NAND_0/VN" "VSUBS"

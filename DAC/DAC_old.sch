@@ -89,63 +89,6 @@ N 1090 -20 1230 -20 {lab=PROBE1}
 N 1020 -180 1090 -180 {lab=#net13}
 N 3190 -20 3190 60 {lab=PROBE1}
 N 3190 60 3190 110 {lab=PROBE1}
-C {code_shown.sym} 1070 -510 0 0 {name=SPICE only_toplevel=true lvs_ignore=true value="
-.include ~/MADVLSI/MP3/vtd.spice
-.dc Vin 0 15 1
-.control
-run
-plot mux0 mux1 mux2 mux3 mux4 mux5 mux6 mux7 mux8 mux9 mux10 mux11 mux12 mux13 mux14 mux15
-.endc
-.save all"
-}
-C {madvlsi/resistor.sym} 1200 -180 3 1 {name=R1
-value=206
-m=1}
-C {madvlsi/resistor.sym} 1340 -180 3 1 {name=R2
-value=290
-m=1}
-C {madvlsi/resistor.sym} 1480 -180 3 1 {name=R3
-value=409
-m=1}
-C {madvlsi/resistor.sym} 1620 -180 3 1 {name=R4
-value=587
-m=1}
-C {madvlsi/resistor.sym} 1760 -180 3 1 {name=R5
-value=818
-m=1}
-C {madvlsi/resistor.sym} 1900 -180 3 1 {name=R6
-value=1.19k
-m=1}
-C {madvlsi/resistor.sym} 2040 -180 3 1 {name=R7
-value=1.6k
-m=1}
-C {madvlsi/resistor.sym} 2180 -180 3 1 {name=R8
-value=2.31k
-m=1}
-C {madvlsi/resistor.sym} 2320 -180 3 1 {name=R9
-value=3.29k
-m=1}
-C {madvlsi/resistor.sym} 2460 -180 3 1 {name=R10
-value=4.62k
-m=1}
-C {madvlsi/resistor.sym} 2600 -180 3 1 {name=R11
-value=6.49k
-m=1}
-C {madvlsi/resistor.sym} 2740 -180 3 1 {name=R12
-value=9.24k
-m=1}
-C {madvlsi/resistor.sym} 2880 -180 3 1 {name=R13
-value=12.98k
-m=1}
-C {madvlsi/resistor.sym} 3020 -180 3 1 {name=R14
-value=18.40k
-m=1}
-C {madvlsi/resistor.sym} 3160 -180 3 1 {name=R15
-value=25.96k
-m=1}
-C {madvlsi/resistor.sym} 3300 -180 3 1 {name=R16
-value=71.1k
-m=1}
 C {madvlsi/nmos3.sym} 1090 -90 2 1 {name=M1
 L=0.15
 W=0.5
@@ -183,12 +126,6 @@ C {lab_pin.sym} 3050 -150 0 1 {name=p34 sig_type=std_logic only_toplevel=true
 lvs_ignore=true lab=N14}
 C {lab_pin.sym} 2910 -150 0 1 {name=p38 sig_type=std_logic only_toplevel=true
 lvs_ignore=true lab=N13}
-C {madvlsi/resistor.sym} 990 -180 3 1 {name=R17
-value=500
-m=1}
-C {madvlsi/resistor.sym} 3190 140 2 1 {name=R18
-value=10k
-m=1}
 C {lab_pin.sym} 3190 50 0 0 {name=p35 sig_type=std_logic only_toplevel=true
 lvs_ignore=true lab=PROBE1}
 C {madvlsi/nmos3.sym} 1230 -90 2 1 {name=M2
@@ -433,40 +370,120 @@ C {lab_pin.sym} 2630 -530 2 0 {name=p51 sig_type=std_logic lab=MUX13}
 C {lab_pin.sym} 2630 -510 2 0 {name=p52 sig_type=std_logic lab=MUX14}
 C {lab_pin.sym} 2630 -490 2 0 {name=p53 sig_type=std_logic lab=MUX15}
 C {decoder.sym} 2480 -680 0 0 {name=x2}
-C {lab_pin.sym} 2110 -770 2 0 {name=p11 sig_type=std_logic only_toplevel=true
-lvs_ignore=true lab=A0}
-C {lab_pin.sym} 2110 -750 2 0 {name=p22 sig_type=std_logic only_toplevel=true
-lvs_ignore=true lab=A1}
-C {lab_pin.sym} 2110 -730 2 0 {name=p23 sig_type=std_logic only_toplevel=true
-lvs_ignore=true lab=A2}
-C {lab_pin.sym} 2110 -710 2 0 {name=p24 sig_type=std_logic only_toplevel=true
-lvs_ignore=true lab=A3}
-C {madvlsi/vsource.sym} 1940 -760 1 0 {name=Vin
-only_toplevel=true
-lvs_ignore=true
-value=0}
-C {madvlsi/vsource.sym} 1610 -580 0 0 {name=Vdd
-only_toplevel=true
-lvs_ignore=true
-value=1.8}
-C {lab_pin.sym} 1610 -550 0 0 {name=p25 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
-C {gnd.sym} 1700 -550 0 0 {name=l9 lab=GND only_toplevel=true lvs_ignore=true}
-C {madvlsi/vsource.sym} 1700 -580 0 0 {name=Vss
-only_toplevel=true
-lvs_ignore=true
-value=0}
-C {lab_pin.sym} 1700 -610 2 0 {name=p26 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VN}
-C {lab_pin.sym} 1610 -610 0 0 {name=p27 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
-C {iopin.sym} 3330 -180 0 0 {name=p28 lab=VP}
-C {iopin.sym} 960 -180 2 0 {name=p29 lab=VN}
-C {lab_pin.sym} 2540 -800 0 0 {name=p30 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 2540 -470 0 0 {name=p31 sig_type=std_logic lab=VN}
-C {sky130_fd_pr/corner.sym} 1040 -690 0 0 {name=CORNER only_toplevel=true lvs_ignore=true corner=tt}
-C {lab_pin.sym} 1970 -710 0 0 {name=p32 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
-C {gnd.sym} 1910 -760 1 0 {name=l1 lab=GND only_toplevel=true lvs_ignore=true}
+C {iopin.sym} 3330 -180 0 0 {name=p28 lab=VDD}
+C {iopin.sym} 960 -180 2 0 {name=p29 lab=GND}
+C {lab_pin.sym} 2540 -800 0 0 {name=p30 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2540 -470 0 0 {name=p31 sig_type=std_logic lab=GND}
 C {ipin.sym} 2460 -660 0 0 {name=p13 sig_type=std_logic lab=A0}
 C {ipin.sym} 2460 -640 0 0 {name=p14 sig_type=std_logic lab=A1}
 C {ipin.sym} 2460 -620 0 0 {name=p20 sig_type=std_logic lab=A2}
 C {ipin.sym} 2460 -600 0 0 {name=p21 sig_type=std_logic lab=A3}
 C {opin.sym} 3190 170 1 0 {name=p54 sig_type=std_logic lab=Vout}
-C {/home/veswaranandam/MADVLSI/MP3/vtd.sym} 2070 -710 0 0 {name=X3}
+C {sky130_fd_pr/res_generic_po.sym} 3190 140 0 0 {name=R19
+W=0.35
+L=8.40
+model=res_generic_po
+spiceprefix=X
+mult=0.125}
+C {sky130_fd_pr/res_generic_po.sym} 3300 -180 1 0 {name=R20
+W=0.35
+L=17.81
+model=res_generic_po
+spiceprefix=X
+mult=0.0344827586}
+C {sky130_fd_pr/res_generic_po.sym} 3160 -180 1 0 {name=R21
+W=0.35
+L=17.10
+model=res_generic_po
+spiceprefix=X
+mult=0.0909090909}
+C {sky130_fd_pr/res_generic_po.sym} 3020 -180 1 0 {name=R14
+W=0.35
+L=14.85
+model=res_generic_po
+spiceprefix=X
+mult=0.111111111}
+C {sky130_fd_pr/res_generic_po.sym} 2880 -180 1 0 {name=R9
+W=0.35
+L=15.72
+model=res_generic_po
+spiceprefix=X
+mult=0.166666667}
+C {sky130_fd_pr/res_generic_po.sym} 2740 -180 1 0 {name=R10
+W=0.35
+L=8.4
+model=res_generic_po
+spiceprefix=X
+mult=0.125}
+C {sky130_fd_pr/res_generic_po.sym} 2600 -180 1 0 {name=R11
+W=0.35
+L=11.79
+model=res_generic_po
+spiceprefix=X
+mult=0.25}
+C {sky130_fd_pr/res_generic_po.sym} 2460 -180 1 0 {name=R12
+W=0.35
+L=11.25
+model=res_generic_po
+spiceprefix=X
+mult=0.33333333333}
+C {sky130_fd_pr/res_generic_po.sym} 2320 -180 1 0 {name=R13
+W=0.35
+L=11.95
+model=res_generic_po
+spiceprefix=X
+mult=0.5}
+C {sky130_fd_pr/res_generic_po.sym} 2180 -180 1 0 {name=R6
+W=0.35
+L=8.4
+model=res_generic_po
+spiceprefix=X
+mult=0.5}
+C {sky130_fd_pr/res_generic_po.sym} 2040 -180 1 0 {name=R7
+W=0.35
+L=5.81
+model=res_generic_po
+spiceprefix=X
+mult=0.5}
+C {sky130_fd_pr/res_generic_po.sym} 1900 -180 1 0 {name=R8
+W=0.35
+L=8.7
+model=res_generic_po
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_generic_po.sym} 1760 -180 1 0 {name=R2
+W=0.35
+L=5.94
+model=res_generic_po
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_generic_po.sym} 1620 -180 1 0 {name=R3
+W=0.35
+L=4.27
+model=res_generic_po
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_generic_po.sym} 1480 -180 1 0 {name=R4
+W=0.35
+L=2.97
+model=res_generic_po
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_generic_po.sym} 1340 -180 1 0 {name=R5
+W=0.35
+L=2.10
+model=res_generic_po
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_generic_po.sym} 1200 -180 1 0 {name=R1
+W=0.35
+L=1.75
+model=res_generic_po
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_generic_po.sym} 990 -180 1 0 {name=R15
+W=0.35
+L=3.35
+model=res_generic_po
+spiceprefix=X
+mult=1}

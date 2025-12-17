@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.7RC file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 N -1670 30 -1670 90 {lab=#net1}
 N -1530 30 -1530 90 {lab=#net2}
@@ -532,8 +531,8 @@ model=res_generic_po
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_generic_po.sym} -1910 30 1 0 {name=R15
-W=1
-L=1
+W=0.5
+L=0.15
 model=res_generic_po
 spiceprefix=X
 mult=1}
