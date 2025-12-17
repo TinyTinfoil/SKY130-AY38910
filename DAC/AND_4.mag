@@ -1,0 +1,52 @@
+magic
+tech sky130A
+timestamp 1765900072
+<< locali >>
+rect -10 55 10 75
+rect 870 35 985 75
+rect -10 -5 10 15
+rect -10 -60 10 -40
+rect 415 -85 435 15
+rect -10 -120 10 -100
+<< metal1 >>
+rect -10 245 10 345
+rect 775 245 940 270
+rect -10 90 10 190
+rect -10 55 10 75
+rect -10 -5 10 15
+rect -10 -60 10 -40
+rect -10 -120 10 -100
+rect 225 -150 250 115
+rect 870 35 880 75
+rect 920 -30 940 245
+rect 460 -45 940 -30
+rect 460 -295 475 -45
+rect 430 -320 475 -295
+use AND  AND_0
+timestamp 1758518674
+transform 1 0 255 0 1 35
+box -265 -40 180 330
+use AND  AND_1
+timestamp 1758518674
+transform 1 0 700 0 1 35
+box -265 -40 180 330
+use AND  AND_2
+timestamp 1758518674
+transform 1 0 255 0 -1 -80
+box -265 -40 180 330
+<< labels >>
+rlabel metal1 -10 140 -10 140 7 VN
+port 1 w
+rlabel metal1 -10 295 -10 295 7 VP1
+port 2 w
+rlabel metal1 -10 65 -10 65 7 A
+port 4 w
+rlabel metal1 -10 5 -10 5 7 B
+port 5 w
+rlabel metal1 -10 -50 -10 -50 7 C
+port 6 w
+rlabel metal1 -10 -110 -10 -110 7 D
+port 7 w
+rlabel locali 985 55 985 55 3 Y
+port 8 e
+<< end >>
