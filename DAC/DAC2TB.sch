@@ -1,8 +1,9 @@
-v {xschem version=3.4.7RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N 1230 -180 1230 -120 {lab=#net1}
 N 1370 -180 1370 -120 {lab=#net2}
@@ -27,12 +28,12 @@ N 2630 -180 2630 -120 {lab=#net11}
 N 2490 -180 2570 -180 {lab=#net10}
 N 2770 -180 2770 -120 {lab=#net12}
 N 2630 -180 2710 -180 {lab=#net11}
-N 2910 -180 2910 -120 {lab=N13}
+N 2910 -180 2910 -120 {lab=#net13}
 N 2770 -180 2850 -180 {lab=#net12}
-N 3050 -180 3050 -120 {lab=N14}
-N 2910 -180 2990 -180 {lab=N13}
-N 3190 -180 3190 -120 {lab=N15}
-N 3050 -180 3130 -180 {lab=N14}
+N 3050 -180 3050 -120 {lab=#net14}
+N 2910 -180 2990 -180 {lab=#net13}
+N 3190 -180 3190 -120 {lab=#net15}
+N 3050 -180 3130 -180 {lab=#net14}
 N 1190 -90 1200 -90 {lab=MUX1}
 N 1190 -280 1190 -90 {lab=MUX1}
 N 1330 -90 1340 -90 {lab=MUX2}
@@ -63,32 +64,32 @@ N 2590 -90 2600 -90 {lab=MUX11}
 N 2590 -280 2590 -90 {lab=MUX11}
 N 2730 -90 2740 -90 {lab=MUX12}
 N 2730 -280 2730 -90 {lab=MUX12}
-N 3190 -180 3270 -180 {lab=N15}
-N 1230 -60 1230 -20 {lab=PROBE1}
-N 1230 -20 3190 -20 {lab=PROBE1}
-N 3190 -60 3190 -20 {lab=PROBE1}
-N 3050 -60 3050 -20 {lab=PROBE1}
-N 2910 -60 2910 -20 {lab=PROBE1}
-N 2770 -60 2770 -20 {lab=PROBE1}
-N 2630 -60 2630 -20 {lab=PROBE1}
-N 2490 -60 2490 -20 {lab=PROBE1}
-N 2350 -60 2350 -20 {lab=PROBE1}
-N 2210 -60 2210 -20 {lab=PROBE1}
-N 2070 -60 2070 -20 {lab=PROBE1}
-N 1930 -60 1930 -20 {lab=PROBE1}
-N 1790 -60 1790 -20 {lab=PROBE1}
-N 1650 -60 1650 -20 {lab=PROBE1}
-N 1510 -60 1510 -20 {lab=PROBE1}
-N 1370 -60 1370 -20 {lab=PROBE1}
-N 1090 -180 1090 -120 {lab=#net13}
-N 1090 -180 1170 -180 {lab=#net13}
+N 3190 -180 3270 -180 {lab=#net15}
+N 1230 -60 1230 -20 {lab=#net16}
+N 1230 -20 3190 -20 {lab=#net16}
+N 3190 -60 3190 -20 {lab=#net16}
+N 3050 -60 3050 -20 {lab=#net16}
+N 2910 -60 2910 -20 {lab=#net16}
+N 2770 -60 2770 -20 {lab=#net16}
+N 2630 -60 2630 -20 {lab=#net16}
+N 2490 -60 2490 -20 {lab=#net16}
+N 2350 -60 2350 -20 {lab=#net16}
+N 2210 -60 2210 -20 {lab=#net16}
+N 2070 -60 2070 -20 {lab=#net16}
+N 1930 -60 1930 -20 {lab=#net16}
+N 1790 -60 1790 -20 {lab=#net16}
+N 1650 -60 1650 -20 {lab=#net16}
+N 1510 -60 1510 -20 {lab=#net16}
+N 1370 -60 1370 -20 {lab=#net16}
+N 1090 -180 1090 -120 {lab=#net17}
+N 1090 -180 1170 -180 {lab=#net17}
 N 1050 -90 1060 -90 {lab=MUX0}
 N 1050 -280 1050 -90 {lab=MUX0}
-N 1090 -60 1090 -20 {lab=PROBE1}
-N 1090 -20 1230 -20 {lab=PROBE1}
-N 1020 -180 1090 -180 {lab=#net13}
-N 3190 -20 3190 60 {lab=PROBE1}
-N 3190 60 3190 110 {lab=PROBE1}
+N 1090 -60 1090 -20 {lab=#net16}
+N 1090 -20 1230 -20 {lab=#net16}
+N 1020 -180 1090 -180 {lab=#net17}
+N 3190 -20 3190 60 {lab=#net16}
+N 3190 60 3190 110 {lab=#net16}
 C {code_shown.sym} 1070 -510 0 0 {name=SPICE only_toplevel=true lvs_ignore=true value="
 .include ~/MADVLSI/MP3/vtd.spice
 .dc Vin 0 15 1
@@ -469,4 +470,6 @@ C {ipin.sym} 2460 -640 0 0 {name=p14 sig_type=std_logic lab=A1}
 C {ipin.sym} 2460 -620 0 0 {name=p20 sig_type=std_logic lab=A2}
 C {ipin.sym} 2460 -600 0 0 {name=p21 sig_type=std_logic lab=A3}
 C {opin.sym} 3190 170 1 0 {name=p54 sig_type=std_logic lab=Vout}
-C {/home/veswaranandam/MADVLSI/MP3/vtd.sym} 2070 -710 0 0 {name=X3}
+C {/home/veswaranandam/MADVLSI/MP3/vtd.sym} 2070 -710 0 0 {name=X3
+only_toplevel=true
+lvs_ignore=true}
