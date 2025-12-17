@@ -8,7 +8,7 @@ N -390 -140 -370 -140 {lab=bc1}
 N -390 -100 -370 -100 {lab=bc2}
 N -390 -60 -370 -60 {lab=bdir}
 N -390 -20 -370 -20 {lab=cen}
-C {digital_core_post.sym} -120 -30 0 1 {name=X1 model=digital_core}
+C {digital_core_post.sym} -50 -390 0 1 {name=X1 model=digital_core}
 C {code_shown.sym} -1310 -440 0 0 {name=COMMANDS only_toplevel=false value="
 .param VDD=1.8
 .include ext/digital_core.spice
@@ -27,32 +27,28 @@ only_toplevel=true
 lvs_ignore=true
 value=1.8}
 C {lab_pin.sym} -1250 70 0 0 {name=p9 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
-C {lab_pin.sym} 20 70 2 0 {name=p5 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
 C {lab_pin.sym} -210 20 0 0 {name=p7 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
 C {lab_pin.sym} 20 -370 2 0 {name=p38 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=VP}
-C {lab_pin.sym} 0 -670 0 0 {name=p78 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A0}
-C {lab_pin.sym} 0 -630 0 0 {name=p79 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A1}
-C {lab_pin.sym} 0 -590 0 0 {name=p80 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A2}
-C {lab_pin.sym} 0 -550 0 0 {name=p81 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A3}
-C {lab_pin.sym} 0 -510 0 0 {name=p82 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A4}
-C {lab_pin.sym} -120 -670 0 0 {name=p83 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B0}
-C {lab_pin.sym} -120 -630 0 0 {name=p84 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B1}
-C {lab_pin.sym} -120 -590 0 0 {name=p85 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B2}
-C {lab_pin.sym} -120 -550 0 0 {name=p86 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B3}
-C {lab_pin.sym} -120 -510 0 0 {name=p87 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B4}
-C {lab_pin.sym} -250 -670 0 0 {name=p88 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C0}
-C {lab_pin.sym} -250 -630 0 0 {name=p89 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C1}
-C {lab_pin.sym} -250 -590 0 0 {name=p90 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C2}
-C {lab_pin.sym} -250 -550 0 0 {name=p91 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C3}
-C {lab_pin.sym} -250 -510 0 0 {name=p92 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C4}
-C {lab_pin.sym} -400 -510 2 0 {name=p6 lab=din_out7}
-C {lab_pin.sym} -400 -550 2 0 {name=p11 lab=din_out6}
-C {lab_pin.sym} -400 -590 2 0 {name=p12 lab=din_out5}
-C {lab_pin.sym} -400 -630 2 0 {name=p16 lab=din_out4}
-C {lab_pin.sym} -400 -670 2 0 {name=p21 lab=din_out3}
-C {lab_pin.sym} -400 -710 2 0 {name=p22 lab=din_out2}
-C {lab_pin.sym} -400 -750 2 0 {name=p23 lab=din_out1}
-C {lab_pin.sym} -400 -790 2 0 {name=p24 lab=din_out0}
+C {lab_pin.sym} -210 -650 0 0 {name=p78 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A0}
+C {lab_pin.sym} -210 -610 0 0 {name=p79 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A1}
+C {lab_pin.sym} -210 -570 0 0 {name=p80 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A2}
+C {lab_pin.sym} -210 -530 0 0 {name=p81 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A3}
+C {lab_pin.sym} -210 -820 0 0 {name=p83 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B0}
+C {lab_pin.sym} -210 -780 0 0 {name=p84 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B1}
+C {lab_pin.sym} -210 -740 0 0 {name=p85 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B2}
+C {lab_pin.sym} -210 -700 0 0 {name=p86 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B3}
+C {lab_pin.sym} -210 -990 0 0 {name=p88 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C0}
+C {lab_pin.sym} -210 -950 0 0 {name=p89 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C1}
+C {lab_pin.sym} -210 -910 0 0 {name=p90 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C2}
+C {lab_pin.sym} -210 -870 0 0 {name=p91 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C3}
+C {lab_pin.sym} 100 -1080 2 0 {name=p6 lab=din_out7}
+C {lab_pin.sym} 100 -1120 2 0 {name=p11 lab=din_out6}
+C {lab_pin.sym} 100 -1160 2 0 {name=p12 lab=din_out5}
+C {lab_pin.sym} 100 -1200 2 0 {name=p16 lab=din_out4}
+C {lab_pin.sym} 100 -1240 2 0 {name=p21 lab=din_out3}
+C {lab_pin.sym} 100 -1280 2 0 {name=p22 lab=din_out2}
+C {lab_pin.sym} 100 -1320 2 0 {name=p23 lab=din_out1}
+C {lab_pin.sym} 100 -1360 2 0 {name=p24 lab=din_out0}
 C {sky130_fd_pr/corner.sym} 210 120 0 0 {name=CORNER only_toplevel=true lvs_ignore=true corner=tt}
 C {test_core_post.sym} -480 -30 0 0 {name=X2 model=test_core
 }
@@ -77,202 +73,202 @@ C {lab_pin.sym} -390 -290 2 0 {name=p44 lab=din_out3}
 C {lab_pin.sym} -390 -320 2 0 {name=p45 lab=din_out2}
 C {lab_pin.sym} -390 -350 2 0 {name=p46 lab=din_out1}
 C {lab_pin.sym} -390 -380 2 0 {name=p47 lab=din_out0}
-C {res.sym} -580 -790 1 0 {name=R1
+C {res.sym} -240 -1360 1 0 {name=R1
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -580 -750 1 0 {name=R2
+C {res.sym} -240 -1320 1 0 {name=R2
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -580 -710 1 0 {name=R3
+C {res.sym} -240 -1280 1 0 {name=R3
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -580 -670 1 0 {name=R4
+C {res.sym} -240 -1240 1 0 {name=R4
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -580 -630 1 0 {name=R5
+C {res.sym} -240 -1200 1 0 {name=R5
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -580 -590 1 0 {name=R6
+C {res.sym} -240 -1160 1 0 {name=R6
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -580 -550 1 0 {name=R7
+C {res.sym} -240 -1120 1 0 {name=R7
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -580 -510 1 0 {name=R8
+C {res.sym} -240 -1080 1 0 {name=R8
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 850 -510 3 0 {name=R9
+C {res.sym} -240 -2000 1 0 {name=R9
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 850 -550 3 0 {name=R10
+C {res.sym} -240 -1960 1 0 {name=R10
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 850 -590 3 0 {name=R11
+C {res.sym} -240 -1920 1 0 {name=R11
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 850 -630 3 0 {name=R12
+C {res.sym} -240 -1880 1 0 {name=R12
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 850 -670 3 0 {name=R13
+C {res.sym} -240 -1840 1 0 {name=R13
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 850 -710 3 0 {name=R14
+C {res.sym} -240 -1800 1 0 {name=R14
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 850 -750 3 0 {name=R15
+C {res.sym} -240 -1760 1 0 {name=R15
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 850 -790 3 0 {name=R16
+C {res.sym} -240 -1720 1 0 {name=R16
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 680 -510 3 0 {name=R17
+C {res.sym} -240 -1680 1 0 {name=R17
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 680 -550 3 0 {name=R18
+C {res.sym} -240 -1640 1 0 {name=R18
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 680 -590 3 0 {name=R19
+C {res.sym} -240 -1600 1 0 {name=R19
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 680 -630 3 0 {name=R20
+C {res.sym} -240 -1560 1 0 {name=R20
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 680 -670 3 0 {name=R21
+C {res.sym} -240 -1520 1 0 {name=R21
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 680 -710 3 0 {name=R22
+C {res.sym} -240 -1480 1 0 {name=R22
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 680 -750 3 0 {name=R23
+C {res.sym} -240 -1440 1 0 {name=R23
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 680 -790 3 0 {name=R24
+C {res.sym} -240 -1400 1 0 {name=R24
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 500 -510 3 0 {name=R25
+C {res.sym} 130 -1720 3 0 {name=R25
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 500 -550 3 0 {name=R26
+C {res.sym} 130 -1760 3 0 {name=R26
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 500 -590 3 0 {name=R27
+C {res.sym} 130 -1800 3 0 {name=R27
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 500 -630 3 0 {name=R28
+C {res.sym} 130 -1840 3 0 {name=R28
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 500 -670 3 0 {name=R29
+C {res.sym} 130 -1880 3 0 {name=R29
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 500 -710 3 0 {name=R30
+C {res.sym} 130 -1920 3 0 {name=R30
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 500 -750 3 0 {name=R31
+C {res.sym} 130 -1960 3 0 {name=R31
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 500 -790 3 0 {name=R32
+C {res.sym} 130 -2000 3 0 {name=R32
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 330 -510 3 0 {name=R33
+C {res.sym} 130 -1400 3 0 {name=R33
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 330 -550 3 0 {name=R34
+C {res.sym} 130 -1440 3 0 {name=R34
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 330 -590 3 0 {name=R35
+C {res.sym} 130 -1480 3 0 {name=R35
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 330 -630 3 0 {name=R36
+C {res.sym} 130 -1520 3 0 {name=R36
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 330 -670 3 0 {name=R37
+C {res.sym} 130 -1560 3 0 {name=R37
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 330 -710 3 0 {name=R38
+C {res.sym} 130 -1600 3 0 {name=R38
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 330 -750 3 0 {name=R39
+C {res.sym} 130 -1640 3 0 {name=R39
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 330 -790 3 0 {name=R40
+C {res.sym} 130 -1680 3 0 {name=R40
 value=1M
 footprint=1206
 device=resistor
@@ -293,91 +289,89 @@ C {lab_pin.sym} 80 -180 2 0 {name=p61 lab=0
 }
 C {lab_pin.sym} 80 -90 2 0 {name=p62 lab=0
 }
-C {lab_pin.sym} 20 -50 2 0 {name=p63 lab=0
-}
 C {lab_pin.sym} -210 60 0 0 {name=p64 lab=0
 }
 C {lab_pin.sym} -1250 130 3 0 {name=p65 lab=0
 }
-C {lab_pin.sym} 880 -790 2 0 {name=p66 lab=0
+C {lab_pin.sym} -270 -1720 0 0 {name=p66 lab=0
 }
-C {lab_pin.sym} 880 -750 2 0 {name=p67 lab=0
+C {lab_pin.sym} -270 -1760 0 0 {name=p67 lab=0
 }
-C {lab_pin.sym} 880 -710 2 0 {name=p68 lab=0
+C {lab_pin.sym} -270 -1800 0 0 {name=p68 lab=0
 }
-C {lab_pin.sym} 880 -670 2 0 {name=p69 lab=0
+C {lab_pin.sym} -270 -1840 0 0 {name=p69 lab=0
 }
-C {lab_pin.sym} 880 -630 2 0 {name=p70 lab=0
+C {lab_pin.sym} -270 -1880 0 0 {name=p70 lab=0
 }
-C {lab_pin.sym} 880 -590 2 0 {name=p71 lab=0
+C {lab_pin.sym} -270 -1920 0 0 {name=p71 lab=0
 }
-C {lab_pin.sym} 880 -550 2 0 {name=p72 lab=0
+C {lab_pin.sym} -270 -1960 0 0 {name=p72 lab=0
 }
-C {lab_pin.sym} 880 -510 2 0 {name=p73 lab=0
+C {lab_pin.sym} -270 -2000 0 0 {name=p73 lab=0
 }
-C {lab_pin.sym} 710 -790 2 0 {name=p74 lab=0
+C {lab_pin.sym} -270 -1400 0 0 {name=p74 lab=0
 }
-C {lab_pin.sym} 710 -750 2 0 {name=p75 lab=0
+C {lab_pin.sym} -270 -1440 0 0 {name=p75 lab=0
 }
-C {lab_pin.sym} 710 -710 2 0 {name=p76 lab=0
+C {lab_pin.sym} -270 -1480 0 0 {name=p76 lab=0
 }
-C {lab_pin.sym} 710 -670 2 0 {name=p77 lab=0
+C {lab_pin.sym} -270 -1520 0 0 {name=p77 lab=0
 }
-C {lab_pin.sym} 710 -630 2 0 {name=p96 lab=0
+C {lab_pin.sym} -270 -1560 0 0 {name=p96 lab=0
 }
-C {lab_pin.sym} 710 -590 2 0 {name=p97 lab=0
+C {lab_pin.sym} -270 -1600 0 0 {name=p97 lab=0
 }
-C {lab_pin.sym} 710 -550 2 0 {name=p98 lab=0
+C {lab_pin.sym} -270 -1640 0 0 {name=p98 lab=0
 }
-C {lab_pin.sym} 710 -510 2 0 {name=p99 lab=0
+C {lab_pin.sym} -270 -1680 0 0 {name=p99 lab=0
 }
-C {lab_pin.sym} 530 -790 2 0 {name=p100 lab=0
+C {lab_pin.sym} 160 -2000 2 0 {name=p100 lab=0
 }
-C {lab_pin.sym} 530 -750 2 0 {name=p101 lab=0
+C {lab_pin.sym} 160 -1960 2 0 {name=p101 lab=0
 }
-C {lab_pin.sym} 530 -710 2 0 {name=p102 lab=0
+C {lab_pin.sym} 160 -1920 2 0 {name=p102 lab=0
 }
-C {lab_pin.sym} 530 -670 2 0 {name=p103 lab=0
+C {lab_pin.sym} 160 -1880 2 0 {name=p103 lab=0
 }
-C {lab_pin.sym} 530 -630 2 0 {name=p104 lab=0
+C {lab_pin.sym} 160 -1840 2 0 {name=p104 lab=0
 }
-C {lab_pin.sym} 530 -590 2 0 {name=p105 lab=0
+C {lab_pin.sym} 160 -1800 2 0 {name=p105 lab=0
 }
-C {lab_pin.sym} 530 -550 2 0 {name=p106 lab=0
+C {lab_pin.sym} 160 -1760 2 0 {name=p106 lab=0
 }
-C {lab_pin.sym} 530 -510 2 0 {name=p107 lab=0
+C {lab_pin.sym} 160 -1720 2 0 {name=p107 lab=0
 }
-C {lab_pin.sym} 360 -790 2 0 {name=p108 lab=0
+C {lab_pin.sym} 160 -1680 2 0 {name=p108 lab=0
 }
-C {lab_pin.sym} 360 -750 2 0 {name=p109 lab=0
+C {lab_pin.sym} 160 -1640 2 0 {name=p109 lab=0
 }
-C {lab_pin.sym} 360 -710 2 0 {name=p110 lab=0
+C {lab_pin.sym} 160 -1600 2 0 {name=p110 lab=0
 }
-C {lab_pin.sym} 360 -670 2 0 {name=p111 lab=0
+C {lab_pin.sym} 160 -1560 2 0 {name=p111 lab=0
 }
-C {lab_pin.sym} 360 -630 2 0 {name=p112 lab=0
+C {lab_pin.sym} 160 -1520 2 0 {name=p112 lab=0
 }
-C {lab_pin.sym} 360 -590 2 0 {name=p113 lab=0
+C {lab_pin.sym} 160 -1480 2 0 {name=p113 lab=0
 }
-C {lab_pin.sym} 360 -550 2 0 {name=p114 lab=0
+C {lab_pin.sym} 160 -1440 2 0 {name=p114 lab=0
 }
-C {lab_pin.sym} 360 -510 2 0 {name=p115 lab=0
+C {lab_pin.sym} 160 -1400 2 0 {name=p115 lab=0
 }
-C {lab_pin.sym} -610 -510 0 0 {name=p116 lab=0
+C {lab_pin.sym} -270 -1080 0 0 {name=p116 lab=0
 }
-C {lab_pin.sym} -610 -550 0 0 {name=p117 lab=0
+C {lab_pin.sym} -270 -1120 0 0 {name=p117 lab=0
 }
-C {lab_pin.sym} -610 -590 0 0 {name=p118 lab=0
+C {lab_pin.sym} -270 -1160 0 0 {name=p118 lab=0
 }
-C {lab_pin.sym} -610 -630 0 0 {name=p119 lab=0
+C {lab_pin.sym} -270 -1200 0 0 {name=p119 lab=0
 }
-C {lab_pin.sym} -610 -670 0 0 {name=p120 lab=0
+C {lab_pin.sym} -270 -1240 0 0 {name=p120 lab=0
 }
-C {lab_pin.sym} -610 -710 0 0 {name=p121 lab=0
+C {lab_pin.sym} -270 -1280 0 0 {name=p121 lab=0
 }
-C {lab_pin.sym} -610 -750 0 0 {name=p122 lab=0
+C {lab_pin.sym} -270 -1320 0 0 {name=p122 lab=0
 }
-C {lab_pin.sym} -610 -790 0 0 {name=p123 lab=0
+C {lab_pin.sym} -270 -1360 0 0 {name=p123 lab=0
 }
 C {res.sym} 100 290 3 0 {name=R41
 value=1G
@@ -390,17 +384,14 @@ C {lab_pin.sym} 70 290 0 0 {name=p42 sig_type=std_logic only_toplevel=true lvs_i
 C {lab_pin.sym} 70 330 0 0 {name=p43 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A1}
 C {lab_pin.sym} 70 370 0 0 {name=p48 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A2}
 C {lab_pin.sym} 70 410 0 0 {name=p49 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A3}
-C {lab_pin.sym} 70 450 0 0 {name=p50 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=A4}
 C {lab_pin.sym} -50 290 0 0 {name=p51 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B0}
 C {lab_pin.sym} -50 330 0 0 {name=p52 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B1}
 C {lab_pin.sym} -50 370 0 0 {name=p53 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B2}
 C {lab_pin.sym} -50 410 0 0 {name=p54 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B3}
-C {lab_pin.sym} -50 450 0 0 {name=p55 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=B4}
 C {lab_pin.sym} -180 290 0 0 {name=p56 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C0}
 C {lab_pin.sym} -180 330 0 0 {name=p57 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C1}
 C {lab_pin.sym} -180 370 0 0 {name=p58 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C2}
 C {lab_pin.sym} -180 410 0 0 {name=p59 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C3}
-C {lab_pin.sym} -180 450 0 0 {name=p124 sig_type=std_logic only_toplevel=true lvs_ignore=true lab=C4}
 C {res.sym} 100 330 3 0 {name=R42
 value=1G
 footprint=1206
@@ -421,13 +412,6 @@ footprint=1206
 device=resistor
 m=1}
 C {lab_pin.sym} 130 410 2 0 {name=p10 lab=0
-}
-C {res.sym} 100 450 3 0 {name=R45
-value=1G
-footprint=1206
-device=resistor
-m=1}
-C {lab_pin.sym} 130 450 2 0 {name=p13 lab=0
 }
 C {res.sym} -20 290 3 0 {name=R46
 value=1G
@@ -457,13 +441,6 @@ device=resistor
 m=1}
 C {lab_pin.sym} 10 410 2 0 {name=p18 lab=0
 }
-C {res.sym} -20 450 3 0 {name=R50
-value=1G
-footprint=1206
-device=resistor
-m=1}
-C {lab_pin.sym} 10 450 2 0 {name=p19 lab=0
-}
 C {res.sym} -150 290 3 0 {name=R51
 value=1G
 footprint=1206
@@ -491,11 +468,4 @@ footprint=1206
 device=resistor
 m=1}
 C {lab_pin.sym} -120 410 2 0 {name=p39 lab=0
-}
-C {res.sym} -150 450 3 0 {name=R55
-value=1G
-footprint=1206
-device=resistor
-m=1}
-C {lab_pin.sym} -120 450 2 0 {name=p40 lab=0
 }

@@ -11,7 +11,7 @@ prog: #for sram
 	sudo chmod -R 777 /dev/bus/usb/ #for WSL
 	dfu-util --device 1d50:6146 --alt 0 -D $(filename_fpga).bin -R
 
-clean: clean-asic clean-verilog
+clean: clean-asic clean-verilog clean-irsim
 	rm -rf $(filename_fpga).blif $(filename_fpga).asc $(filename_fpga).json $(filename_fpga).bin
 
 pnr-gui:
@@ -46,8 +46,8 @@ clean-verilog:
 view-xschem:
 	cd xschem && xschem testbench.sch
 build-xschem:
-	iverilog -o xschem/digital_core src/digital_core.sv
-	iverilog -o xschem/test_core test/test_core.sv
+	iverilog -g2012 -o ~/.xschem/simulations/digital_core src/digital_core.sv
+	iverilog -g2012 -o ~/.xschem/simulations/test_core test/test_core.sv
 
 ############################ Python venv
 VENV = .venv
@@ -59,3 +59,20 @@ venv:
 
 vcd2spice: test.vcd
 	$(PYTHON) vcdtospice.py test.vcd -s "clk=clk" "cen=cen" "rst_n=rst_n" "bdir=bdir" "bc1=bc1" "bc2=bc2" "din=din[7:0]" -o xschem/test_core.spice --subckt test_core
+
+######################### IRSim
+irsim/digital_core.sim:
+	cp asic/mag/digital_core.sim irsim/digital_core.sim
+	sed -i 's/__special_nfet_01v8/__special_nfet_latch/g' irsim/digital_core.sim
+	sed -i 's/VPWR/Vdd/g' irsim/digital_core.sim
+	sed -i 's/VGND/Gnd/g' irsim/digital_core.sim
+
+view-irsim: irsim/digital_core.sim
+	irsim xschem/simulation/share/pdk/sky130A/libs.tech/irsim/sky130A_tt_nom_125.prm irsim/digital_core.sim
+
+clean-irsim:
+	rm -rf irsim/digital_core.sim
+	rm -rf irsim/test.cmd
+
+vcd2irsim: test.vcd
+	$(PYTHON) vcdtoirsim.py test.vcd -s "clk=clk" "clk_en=cen" "rst_n=rst_n" "bdir=bdir" "bc1=bc1" "bc2=bc2" "din=din[7:0]" -o irsim/test.cmd

@@ -36,7 +36,6 @@ digital_core uut( // note that input ports are not multiplexed
     .bc1        ( bc1       ),
     .bc2        ( bc2       ),
     .din        ( din       ),
-    .sel        ( 1'b1      ),
     .nA9       ( 1'b0     ),
     .A8        ( 1'b1     )
 );
@@ -46,8 +45,8 @@ initial begin
     $dumpvars(1,uut);
     $dumpvars(1,tb);
     $dumpon;
-    #2000000 //precalculated max time
-    $display("WARNING: simulation too long");
+    #2000000 //precalculated max time for single wave sim
+    // #823303350 //precalculated max time for full sim
     $finish;
 end
 

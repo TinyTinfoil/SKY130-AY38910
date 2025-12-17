@@ -33,24 +33,21 @@
 module digital_core ( // note that input ports are not multiplexed
     input            rst_n,
     input            clk,    // signal on positive edge
-    input            clk_en /* synthesis direct_enable = 1 */,
+    input            clk_en,
     // bus control pins of original chip
     input            bdir,
     input            bc1,
     input            bc2, //ay-3-8910 has this pin
     input  [7:0]     din,
-
-    input            sel, // if sel is low, the clock is divided by 2
     input      [7:0] IOA_in,
     input      [7:0] IOB_in,
      input nA9,//
     input A8,//
     output     [7:0] dout,
     // output     [9:0] sound,  // combined channel output
-    output     [4:0] A,      // linearised channel output
-    output     [4:0] B,
-    output     [4:0] C,
-    output           sample,
+    output     [3:0] A,      // linearised channel output
+    output     [3:0] B,
+    output     [3:0] C,
 
     output     [7:0] IOA_out,
     output           IOA_oe, // output enable, input when low
@@ -87,7 +84,10 @@ reg wr_n, cs_n;
 reg [3:0] addr;
 reg addr_ok;
 reg [7:0] din_latch;
-
+reg [4:0] A_ex, B_ex, C_ex;
+assign A = A_ex[4:1];
+assign B = B_ex[4:1];
+assign C = C_ex[4:1];
 always @(posedge clk)
     if( !rst_n ) begin
         wr_n    <= 1'b1;
@@ -128,7 +128,7 @@ always @(posedge clk)
         end
     end
 
-jt49 #(.COMP(COMP)) u_jt49( // note that input ports are not multiplexed
+jt49 #(.COMP(COMP)) u_jt49(
     .rst_n  (  rst_n     ),
     .clk    (  clk       ),    // signal on positive edge
     .clk_en (  clk_en    ),    // clock enable on negative edge
@@ -136,13 +136,11 @@ jt49 #(.COMP(COMP)) u_jt49( // note that input ports are not multiplexed
     .cs_n   (  cs_n      ),
     .wr_n   (  wr_n      ),  // write
     .din    (  din_latch ),
-    .sel    (  sel       ), // if sel is low, the clock is divided by 2
+    .sel    (  1'b1       ), // if sel is low, the clock is divided by 2
     .dout   (  dout      ),
-    // .sound  (  sound     ),  // combined channel output
-    .sample (  sample    ),
-    .A      (  A         ),      // linearised channel output
-    .B      (  B         ),
-    .C      (  C         ),
+    .A      (  A_ex         ),      // log channel output
+    .B      (  B_ex         ),
+    .C      (  C_ex         ),
     .IOA_in (  IOA_in    ),
     .IOA_out(  IOA_out   ),
     .IOA_oe (  IOA_oe    ),
@@ -151,4 +149,4 @@ jt49 #(.COMP(COMP)) u_jt49( // note that input ports are not multiplexed
     .IOB_oe (  IOB_oe    )
 );
 
-endmodule // jt49_bus
+endmodule
