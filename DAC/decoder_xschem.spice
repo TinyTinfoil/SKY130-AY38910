@@ -1,74 +1,45 @@
-** sch_path: /home/madvlsi/SKY130-AY38910/DAC/decoder_4b.sch
-**.subckt decoder_4b A3 A2 A0 A1 MUX0 MUX1 MUX2 MUX3 MUX4 MUX5 MUX6 MUX7 MUX8 MUX9 MUX10 MUX11 MUX12 MUX13 MUX14 MUX15 VP VN
-*.iopin MUX0
-*.iopin MUX1
-*.iopin MUX2
-*.iopin MUX3
-*.iopin MUX4
-*.iopin MUX5
-*.iopin MUX6
-*.iopin MUX7
-*.iopin MUX8
-*.iopin MUX9
-*.iopin MUX10
-*.iopin MUX11
-*.iopin MUX12
-*.iopin MUX13
-*.iopin MUX14
-*.iopin MUX15
-*.ipin A0
-*.ipin A1
-*.ipin A2
-*.ipin A3
-*.iopin VP
-*.iopin VN
-x8 net1 net2 net3 net4 MUX0 VP VN AND_4
-x4 A0 net2 net3 net4 MUX1 VP VN AND_4
-x5 net1 A1 net3 net4 MUX2 VP VN AND_4
-x6 A0 A1 net3 net4 MUX3 VP VN AND_4
-x7 net1 net2 A2 net4 MUX4 VP VN AND_4
-x9 A0 net2 A2 net4 MUX5 VP VN AND_4
-x10 net1 A1 A2 net4 MUX6 VP VN AND_4
-x11 A0 A1 A2 net4 MUX7 VP VN AND_4
-x12 net1 net2 net3 A3 MUX8 VP VN AND_4
-x13 A0 net2 net3 A3 MUX9 VP VN AND_4
-x14 net1 A1 net3 A3 MUX10 VP VN AND_4
-x15 A0 A1 net3 A3 MUX11 VP VN AND_4
-x16 net1 net2 A2 A3 MUX12 VP VN AND_4
-x17 A0 net2 A2 A3 MUX13 VP VN AND_4
-x18 net1 A1 A2 A3 MUX14 VP VN AND_4
-x19 A0 A1 A2 A3 MUX15 VP VN AND_4
+** sch_path: /home/veswaranandam/SKY130-AY38910/DAC/decoder.sch
+.subckt decoder A3 A2 A0 A1 MUX0 MUX1 MUX2 MUX3 MUX4 MUX5 MUX6 MUX7 MUX8 MUX9 MUX10 MUX11 MUX12 MUX13 MUX14 MUX15 VP VN
+*.PININFO MUX0:B MUX1:B MUX2:B MUX3:B MUX4:B MUX5:B MUX6:B MUX7:B MUX8:B MUX9:B MUX10:B MUX11:B MUX12:B MUX13:B MUX14:B MUX15:B
+*+ A0:I A1:I A2:I A3:I VP:B VN:B
+x8 A3 A2 A1 A0 MUX15 VP VN AND_4
+x4 A3 A2 A1 net1 MUX14 VP VN AND_4
+x5 A3 A2 net2 A0 MUX13 VP VN AND_4
+x6 A3 A2 net2 net1 MUX12 VP VN AND_4
+x7 A3 net3 A1 A0 MUX11 VP VN AND_4
+x9 A3 net3 A1 net1 MUX10 VP VN AND_4
+x10 A3 net3 net2 A0 MUX9 VP VN AND_4
+x11 A3 net3 net2 net1 MUX8 VP VN AND_4
+x12 net4 A2 A1 A0 MUX7 VP VN AND_4
+x13 net4 A2 A1 net1 MUX6 VP VN AND_4
+x14 net4 A2 net2 A0 MUX5 VP VN AND_4
+x15 net4 A2 net2 net1 MUX4 VP VN AND_4
+x16 net4 net3 A1 A0 MUX3 VP VN AND_4
+x17 net4 net3 A1 net1 MUX2 VP VN AND_4
+x18 net4 net3 net2 A0 MUX1 VP VN AND_4
+x19 net4 net3 net2 net1 MUX0 VP VN AND_4
 X3 A3 net4 VP VN inverter
 X2 A2 net3 VP VN inverter
 X1 A1 net2 VP VN inverter
 X20 A0 net1 VP VN inverter
-**.ends
+.ends
 
 * expanding   symbol:  AND_4.sym # of pins=7
-** sym_path: /home/madvlsi/SKY130-AY38910/DAC/AND_4.sym
-** sch_path: /home/madvlsi/SKY130-AY38910/DAC/AND_4.sch
+** sym_path: /home/veswaranandam/SKY130-AY38910/DAC/AND_4.sym
+** sch_path: /home/veswaranandam/SKY130-AY38910/DAC/AND_4.sch
 .subckt AND_4 A B C D Y VP VN
-*.ipin A
-*.ipin B
-*.opin Y
-*.iopin VP
-*.iopin VN
-*.ipin C
-*.ipin D
-x1 A B net1 VP VN AND
-x2 net1 net2 Y VP VN AND
+*.PININFO A:I B:I Y:O VP:B VN:B C:I D:I
+x0 B A net1 VP VN AND
+x1 net2 net1 Y VP VN AND
 x3 C D net2 VP VN AND
 .ends
 
 
 * expanding   symbol:  inverter.sym # of pins=4
-** sym_path: /home/madvlsi/SKY130-AY38910/DAC/inverter.sym
-** sch_path: /home/madvlsi/SKY130-AY38910/DAC/inverter.sch
+** sym_path: /home/veswaranandam/SKY130-AY38910/DAC/inverter.sym
+** sch_path: /home/veswaranandam/SKY130-AY38910/DAC/inverter.sch
 .subckt inverter A Y VP VN
-*.ipin A
-*.opin Y
-*.iopin VN
-*.iopin VP
+*.PININFO A:I Y:O VN:B VP:B
 XM2 Y A VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM1 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
@@ -77,28 +48,20 @@ XM1 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf *
 
 
 * expanding   symbol:  AND.sym # of pins=5
-** sym_path: /home/madvlsi/SKY130-AY38910/DAC/AND.sym
-** sch_path: /home/madvlsi/SKY130-AY38910/DAC/AND.sch
+** sym_path: /home/veswaranandam/SKY130-AY38910/DAC/AND.sym
+** sch_path: /home/veswaranandam/SKY130-AY38910/DAC/AND.sch
 .subckt AND A B Y VP VN
-*.ipin A
-*.ipin B
-*.opin Y
-*.iopin VP
-*.iopin VN
+*.PININFO A:I B:I Y:O VP:B VN:B
 x1 A B net1 VP VN NAND
 X2 net1 Y VP VN inverter
 .ends
 
 
 * expanding   symbol:  NAND.sym # of pins=5
-** sym_path: /home/madvlsi/SKY130-AY38910/DAC/NAND.sym
-** sch_path: /home/madvlsi/SKY130-AY38910/DAC/NAND.sch
+** sym_path: /home/veswaranandam/SKY130-AY38910/DAC/NAND.sym
+** sch_path: /home/veswaranandam/SKY130-AY38910/DAC/NAND.sch
 .subckt NAND A B Y VP VN
-*.ipin A
-*.ipin B
-*.opin Y
-*.iopin VP
-*.iopin VN
+*.PININFO A:I B:I Y:O VP:B VN:B
 XM2 Y A net1 VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1
 + m=1
 XM11 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1 m=1
@@ -108,4 +71,3 @@ XM3 net1 B VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad=0.29 as=0.29 pd=2.58
 .ends
 
 .GLOBAL GND
-.end

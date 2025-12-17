@@ -1,4 +1,4 @@
-* SPICE3 file created from AND_4.ext - technology: sky130A
+* NGSPICE file created from AND_4.ext - technology: sky130A
 
 .subckt inverter A Y VP VN
 X0 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
@@ -17,9 +17,9 @@ Xinverter_0 NAND_0/Y Y VP VN inverter
 XNAND_0 A B NAND_0/Y VP VN NAND
 .ends
 
-*.subckt AND_4 VN VP1 A B C D Y
-XAND_0 B A AND_1/B VP1 VN AND
-XAND_1 AND_2/Y AND_1/B Y VP1 VN AND
-XAND_2 C D AND_2/Y VP1 VN AND
-*.ends
+.subckt AND_4 A B C D Y VP VN
+XAND_0 B A AND_1/B VP VN AND
+XAND_1 AND_2/Y AND_1/B Y VP VN AND
+XAND_2 C D AND_2/Y VP VN AND
+.ends
 

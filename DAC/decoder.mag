@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1765941971
+timestamp 1765979072
 << nwell >>
 rect -2570 1560 -2340 1950
 rect -1030 1550 -810 1940
@@ -467,18 +467,26 @@ rect -10 -22690 890 -22460
 rect -89 -23019 -10 -22981
 rect -610 -23260 -600 -23200
 rect -530 -23230 -520 -23200
-rect -80 -23230 -10 -23220
-rect -530 -23260 -10 -23230
+rect -20 -23220 22 -23214
+rect -80 -23230 22 -23220
+rect -530 -23242 22 -23230
+rect -530 -23260 -10 -23242
 rect -1720 -23390 -1710 -23310
-rect -1620 -23360 -10 -23310
+rect -1620 -23338 -10 -23310
+rect -1620 -23360 8 -23338
 rect -1620 -23390 -1610 -23360
-rect -80 -23380 -10 -23360
+rect -80 -23366 8 -23360
+rect -80 -23380 -10 -23366
 rect -2520 -23500 -2510 -23430
 rect -2430 -23440 -2420 -23430
-rect -2430 -23480 -10 -23440
+rect -2430 -23450 -10 -23440
+rect -2430 -23478 12 -23450
+rect -2430 -23480 -10 -23478
 rect -2430 -23500 -2420 -23480
 rect -3290 -23620 -3280 -23550
-rect -3210 -23600 -10 -23550
+rect -3210 -23564 -10 -23550
+rect -3210 -23592 20 -23564
+rect -3210 -23600 -10 -23592
 rect -3210 -23610 -3170 -23600
 rect -3210 -23620 -3200 -23610
 << via1 >>
@@ -958,67 +966,67 @@ rect -1569 -23974 -1520 -23445
 rect -589 -23974 -540 -23445
 rect -319 -23974 -270 -23445
 use AND_4  AND_4_0
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 20 0 1 820
 box -20 -820 1970 730
 use AND_4  AND_4_1
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 20 0 1 -810
 box -20 -820 1970 730
 use AND_4  AND_4_2
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -23360
 box -20 -820 1970 730
 use AND_4  AND_4_3
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -21730
 box -20 -820 1970 730
 use AND_4  AND_4_4
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -20140
 box -20 -820 1970 730
 use AND_4  AND_4_5
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -18510
 box -20 -820 1970 730
 use AND_4  AND_4_6
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -16930
 box -20 -820 1970 730
 use AND_4  AND_4_7
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -15300
 box -20 -820 1970 730
 use AND_4  AND_4_8
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -13710
 box -20 -820 1970 730
 use AND_4  AND_4_9
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -12080
 box -20 -820 1970 730
 use AND_4  AND_4_10
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -10460
 box -20 -820 1970 730
 use AND_4  AND_4_11
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -8830
 box -20 -820 1970 730
 use AND_4  AND_4_12
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -7240
 box -20 -820 1970 730
 use AND_4  AND_4_13
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -5610
 box -20 -820 1970 730
 use AND_4  AND_4_14
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -4030
 box -20 -820 1970 730
 use AND_4  AND_4_15
-timestamp 1765900072
+timestamp 1765977919
 transform 1 0 10 0 1 -2400
 box -20 -820 1970 730
 use inverter  inverter_0
@@ -1038,14 +1046,6 @@ timestamp 1758462897
 transform 0 -1 -1900 -1 0 1720
 box -230 -130 160 530
 << labels >>
-rlabel metal1 0 -680 0 -680 7 A
-port 4 w
-rlabel metal1 0 -680 0 -680 7 B
-port 2 w
-rlabel metal1 0 -800 0 -800 7 B
-port 5 w
-rlabel metal1 0 -800 0 -800 7 A
-port 1 w
 rlabel metal2 -3250 2080 -3250 2080 1 A0
 port 9 n
 rlabel metal2 -1670 2080 -1670 2080 1 A2

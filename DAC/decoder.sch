@@ -112,54 +112,54 @@ C {ipin.sym} -20 -120 1 0 {name=p21 lab=A0}
 C {ipin.sym} 160 -120 1 0 {name=p1 lab=A1}
 C {ipin.sym} 320 -120 1 0 {name=p2 lab=A2}
 C {ipin.sym} 500 -120 1 0 {name=p3 lab=A3}
-C {iopin.sym} 770 80 2 0 {name=p6 lab=VP}
-C {iopin.sym} 770 240 2 0 {name=p22 lab=VN}
-C {AND_4.sym} 760 160 0 0 {name=x8}
-C {AND_4.sym} 760 370 0 0 {name=x4}
-C {lab_pin.sym} 770 290 0 0 {name=p25 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 450 0 0 {name=p26 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 560 0 0 {name=x5}
-C {lab_pin.sym} 770 480 0 0 {name=p27 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 640 0 0 {name=p28 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 750 0 0 {name=x6}
-C {lab_pin.sym} 770 670 0 0 {name=p29 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 830 0 0 {name=p30 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 940 0 0 {name=x7}
-C {lab_pin.sym} 770 860 0 0 {name=p31 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 1020 0 0 {name=p32 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 1150 0 0 {name=x9}
-C {lab_pin.sym} 770 1070 0 0 {name=p33 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 1230 0 0 {name=p34 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 1340 0 0 {name=x10}
-C {lab_pin.sym} 770 1260 0 0 {name=p35 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 1420 0 0 {name=p36 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 1530 0 0 {name=x11}
-C {lab_pin.sym} 770 1450 0 0 {name=p37 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 1610 0 0 {name=p38 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 1750 0 0 {name=x12}
-C {lab_pin.sym} 770 1670 0 0 {name=p39 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 1830 0 0 {name=p40 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 1960 0 0 {name=x13}
-C {lab_pin.sym} 770 1880 0 0 {name=p41 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 2040 0 0 {name=p42 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 2150 0 0 {name=x14}
-C {lab_pin.sym} 770 2070 0 0 {name=p43 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 2230 0 0 {name=p44 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 2340 0 0 {name=x15}
-C {lab_pin.sym} 770 2260 0 0 {name=p45 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 2420 0 0 {name=p46 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 2530 0 0 {name=x16}
-C {lab_pin.sym} 770 2450 0 0 {name=p47 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 2610 0 0 {name=p48 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 2740 0 0 {name=x17}
-C {lab_pin.sym} 770 2660 0 0 {name=p49 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 2820 0 0 {name=p50 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 2930 0 0 {name=x18}
-C {lab_pin.sym} 770 2850 0 0 {name=p51 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 3010 0 0 {name=p52 sig_type=std_logic lab=VN}
-C {AND_4.sym} 760 3120 0 0 {name=x19}
-C {lab_pin.sym} 770 3040 0 0 {name=p53 sig_type=std_logic lab=VP}
-C {lab_pin.sym} 770 3200 0 0 {name=p54 sig_type=std_logic lab=VN}
+C {iopin.sym} 770 3200 0 1 {name=p6 lab=VP}
+C {iopin.sym} 770 3040 0 1 {name=p22 lab=VN}
+C {AND_4.sym} 760 3120 2 1 {name=x8}
+C {AND_4.sym} 760 2930 2 1 {name=x4}
+C {lab_pin.sym} 770 3010 2 1 {name=p25 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2850 2 1 {name=p26 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2740 2 1 {name=x5}
+C {lab_pin.sym} 770 2820 2 1 {name=p27 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2660 2 1 {name=p28 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2530 2 1 {name=x6}
+C {lab_pin.sym} 770 2610 2 1 {name=p29 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2450 2 1 {name=p30 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2340 2 1 {name=x7}
+C {lab_pin.sym} 770 2420 2 1 {name=p31 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2260 2 1 {name=p32 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 2150 2 1 {name=x9}
+C {lab_pin.sym} 770 2230 2 1 {name=p33 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 2070 2 1 {name=p34 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1960 2 1 {name=x10}
+C {lab_pin.sym} 770 2040 2 1 {name=p35 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1880 2 1 {name=p36 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1750 2 1 {name=x11}
+C {lab_pin.sym} 770 1830 2 1 {name=p37 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1670 2 1 {name=p38 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1530 2 1 {name=x12}
+C {lab_pin.sym} 770 1610 2 1 {name=p39 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1450 2 1 {name=p40 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1340 2 1 {name=x13}
+C {lab_pin.sym} 770 1420 2 1 {name=p41 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1260 2 1 {name=p42 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 1150 2 1 {name=x14}
+C {lab_pin.sym} 770 1230 2 1 {name=p43 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 1070 2 1 {name=p44 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 940 2 1 {name=x15}
+C {lab_pin.sym} 770 1020 2 1 {name=p45 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 860 2 1 {name=p46 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 750 2 1 {name=x16}
+C {lab_pin.sym} 770 830 2 1 {name=p47 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 670 2 1 {name=p48 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 560 2 1 {name=x17}
+C {lab_pin.sym} 770 640 2 1 {name=p49 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 480 2 1 {name=p50 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 370 2 1 {name=x18}
+C {lab_pin.sym} 770 450 2 1 {name=p51 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 290 2 1 {name=p52 sig_type=std_logic lab=VN}
+C {AND_4.sym} 760 160 2 1 {name=x19}
+C {lab_pin.sym} 770 240 2 1 {name=p53 sig_type=std_logic lab=VP}
+C {lab_pin.sym} 770 80 2 1 {name=p54 sig_type=std_logic lab=VN}
 C {inverter.sym} 560 -30 1 0 {name=X3}
 C {lab_pin.sym} 580 -30 2 0 {name=p55 sig_type=std_logic lab=VP}
 C {lab_pin.sym} 540 -30 0 0 {name=p56 sig_type=std_logic lab=VN}
