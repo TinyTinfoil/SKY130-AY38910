@@ -158,11 +158,11 @@ XAND_4_14 AND_4_1/A AND_4_9/B A1 A0 MUX3 VN VP AND_4
 XAND_4_15 AND_4_1/A AND_4_9/B A1 AND_4_9/D MUX2 VN VP AND_4
 .ends
 
-*.subckt copy_DAC A3 A2 A1 A0 VP VN
-XDACLayoutOff_0 VN VP decoder_0/MUX0 decoder_0/MUX1 decoder_0/MUX2 decoder_0/MUX3
-+ decoder_0/MUX4 decoder_0/MUX5 decoder_0/MUX6 decoder_0/MUX7 decoder_0/MUX8 decoder_0/MUX9
+*.subckt copy_DAC A3 A2 A1 A0 VP VN Vout
+XDACLayoutOff_0 VN VP decoder_0/MUX0 decoder_0/MUX2 decoder_0/MUX1 decoder_0/MUX4
++ decoder_0/MUX3 decoder_0/MUX6 decoder_0/MUX5 decoder_0/MUX7 decoder_0/MUX8 decoder_0/MUX9
 + decoder_0/MUX10 decoder_0/MUX11 decoder_0/MUX12 decoder_0/MUX13 decoder_0/MUX14
-+ decoder_0/MUX15 DACLayoutOff_0/Vout decoder_0/MUX12 DACLayoutOff
++ decoder_0/MUX15 Vout decoder_0/MUX12 DACLayoutOff
 Xdecoder_0 A0 A2 A3 decoder_0/MUX2 decoder_0/MUX5 decoder_0/MUX6 decoder_0/MUX12 decoder_0/MUX13
 + A1 decoder_0/MUX3 decoder_0/MUX4 decoder_0/MUX7 decoder_0/MUX8 decoder_0/MUX9 decoder_0/MUX10
 + decoder_0/MUX11 decoder_0/MUX14 decoder_0/MUX15 decoder_0/MUX1 decoder_0/MUX0 VP

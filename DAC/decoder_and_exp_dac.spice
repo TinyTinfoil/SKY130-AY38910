@@ -40,25 +40,25 @@ x2 net8 net2 net3 net4 net5 net6 net7 net1 net9 net10 net11 net12 net13 net14 ne
 *.iopin VP
 *.iopin VN
 x8 A3 A2 A1 A0 MUX15 VP VN AND_4
-x4 A3 A2 A1 net1 MUX14 VP VN AND_4
-x5 A3 A2 net2 A0 MUX13 VP VN AND_4
-x6 A3 A2 net2 net1 MUX12 VP VN AND_4
-x7 A3 net3 A1 A0 MUX11 VP VN AND_4
-x9 A3 net3 A1 net1 MUX10 VP VN AND_4
-x10 A3 net3 net2 A0 MUX9 VP VN AND_4
-x11 A3 net3 net2 net1 MUX8 VP VN AND_4
-x12 net4 A2 A1 A0 MUX7 VP VN AND_4
-x13 net4 A2 A1 net1 MUX6 VP VN AND_4
-x14 net4 A2 net2 A0 MUX5 VP VN AND_4
-x15 net4 A2 net2 net1 MUX4 VP VN AND_4
-x16 net4 net3 A1 A0 MUX3 VP VN AND_4
-x17 net4 net3 A1 net1 MUX2 VP VN AND_4
-x18 net4 net3 net2 A0 MUX1 VP VN AND_4
-x19 net4 net3 net2 net1 MUX0 VP VN AND_4
-X3 A3 net4 VP VN inverter
-X2 A2 net3 VP VN inverter
-X1 A1 net2 VP VN inverter
-X20 A0 net1 VP VN inverter
+x4 A3 A2 A1 netone MUX14 VP VN AND_4
+x5 A3 A2 nettwo A0 MUX13 VP VN AND_4
+x6 A3 A2 nettwo netone MUX12 VP VN AND_4
+x7 A3 net1 A1 A0 MUX11 VP VN AND_4
+x9 A3 net1 A1 netone MUX10 VP VN AND_4
+x10 A3 net1 nettwo A0 MUX9 VP VN AND_4
+x11 A3 net1 nettwo netone MUX8 VP VN AND_4
+x12 net2 A2 A1 A0 MUX7 VP VN AND_4
+x13 net2 A2 A1 netone MUX6 VP VN AND_4
+x14 net2 A2 nettwo A0 MUX5 VP VN AND_4
+x15 net2 A2 nettwo netone MUX4 VP VN AND_4
+x16 net2 net1 A1 A0 MUX3 VP VN AND_4
+x17 net2 net1 A1 netone MUX2 VP VN AND_4
+x18 net2 net1 nettwo A0 MUX1 VP VN AND_4
+x19 net2 net1 nettwo netone MUX0 VP VN AND_4
+X3 A3 net2 VP VN inverter
+X2 A2 net1 VP VN inverter
+X1 A1 nettwo VP VN inverter
+X20 A0 netone VP VN inverter
 .ends
 
 
