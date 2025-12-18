@@ -137,12 +137,12 @@ A0                                         |A0
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes decoder and decoder are equivalent.
-Flattening unmatched subcell DACLayoutOff in circuit copy_DAC.spice (0)(1 instance)
-Flattening unmatched subcell exp_DAC in circuit decoder_and_exp_dac.spice (1)(1 instance)
+Flattening unmatched subcell DACLayoutOff in circuit DAC (0)(1 instance)
+Flattening unmatched subcell exp_DAC in circuit DAC (1)(1 instance)
 
-Class copy_DAC.spice (0):  Merged 73 series devices.
+Class DAC (0):  Merged 73 series devices.
 Subcircuit summary:
-Circuit 1: copy_DAC.spice                  |Circuit 2: decoder_and_exp_dac.spice       
+Circuit 1: DAC                             |Circuit 2: DAC                             
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__nfet_01v8 (16)               |sky130_fd_pr__nfet_01v8 (16)               
 sky130_fd_pr__res_generic_po (91->18)      |sky130_fd_pr__res_generic_po (18)          
@@ -150,66 +150,21 @@ decoder (1)                                |decoder (1)
 Number of devices: 35                      |Number of devices: 35                      
 Number of nets: 40                         |Number of nets: 40                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely with property errors.
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:20 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R19:
- l circuit1: 67.2   circuit2: 1000   (delta=175%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:86 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R20:
- l circuit1: 516.49   circuit2: 1   (delta=199%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:71 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R1:
- l circuit1: 1.75   circuit2: 1   (delta=54.5%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:64 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R21:
- l circuit1: 188.1   circuit2: 1   (delta=198%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:18 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R14:
- l circuit1: 133.65   circuit2: 1   (delta=197%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:55 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R9:
- l circuit1: 94.32   circuit2: 1   (delta=196%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:10 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R10:
- l circuit1: 67.2   circuit2: 1   (delta=194%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:84 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R11:
- l circuit1: 47.16   circuit2: 1   (delta=192%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:3 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R12:
- l circuit1: 33.75   circuit2: 1   (delta=188%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:4 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R13:
- l circuit1: 23.9   circuit2: 1   (delta=184%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:77 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R6:
- l circuit1: 16.8   circuit2: 1   (delta=178%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:57 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R7:
- l circuit1: 11.62   circuit2: 1   (delta=168%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:40 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R8:
- l circuit1: 8.7   circuit2: 1   (delta=159%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:19 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R2:
- l circuit1: 5.94   circuit2: 1   (delta=142%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:31 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R3:
- l circuit1: 4.27   circuit2: 1   (delta=124%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:11 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R4:
- l circuit1: 2.97   circuit2: 1   (delta=99.2%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:101 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R5:
- l circuit1: 2.1   circuit2: 1   (delta=71%, cutoff=1%)
- w circuit1: 0.35   circuit2: 1   (delta=96.3%, cutoff=1%)
-DACLayoutOff_0/sky130_fd_pr__res_generic_po:93 vs. exp_DAC:2/sky130_fd_pr__res_generic_po:R15:
- l circuit1: 3.35   circuit2: 0.15   (delta=183%, cutoff=1%)
- w circuit1: 0.35   circuit2: 0.5   (delta=35.3%, cutoff=1%)
-Cells have no pins;  pin matching not needed.
-Device classes copy_DAC.spice and decoder_and_exp_dac.spice are equivalent.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: DAC                             |Circuit 2: DAC                             
+-------------------------------------------|-------------------------------------------
+A3                                         |A3                                         
+A2                                         |A2                                         
+A0                                         |A0                                         
+A1                                         |A1                                         
+Vout                                       |Vout                                       
+VP                                         |VP                                         
+VN                                         |VN                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes DAC and DAC are equivalent.
 
 Final result: Circuits match uniquely.
-Property errors were found.
-
-The following cells had property errors:
- copy_DAC.spice
+.
