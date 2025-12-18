@@ -68,7 +68,7 @@ irsim/digital_core.sim:
 	sed -i 's/VGND/Gnd/g' irsim/digital_core.sim
 
 view-irsim: irsim/digital_core.sim
-	irsim xschem/simulation/share/pdk/sky130A/libs.tech/irsim/sky130A_tt_nom_125.prm irsim/digital_core.sim
+	irsim $PDK_ROOT/sky130A/libs.tech/irsim/sky130A_tt_nom_125.prm irsim/digital_core.sim
 
 clean-irsim:
 	rm -rf irsim/digital_core.sim
