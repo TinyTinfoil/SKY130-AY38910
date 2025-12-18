@@ -1,0 +1,18 @@
+* 
+.subckt vtd Vin b0 b1 b2 b3 b4 b5 b6 VP
+Bval Val 0 V = floor(v(Vin))
+B0_q b0_q 0 V = floor(v(Val)/2)
+B0 b0 0 V = (v(Val) - v(b0_q)*2 > 0) ? v(VP) : 0
+B1_q b1_q 0 V = floor(v(b0_q)/2)
+B1 b1 0 V = (v(b0_q) - v(b1_q)*2 > 0) ? v(VP) : 0
+B2_q b2_q 0 V = floor(v(b1_q)/2)
+B2 b2 0 V = (v(b1_q) - v(b2_q)*2 > 0) ? v(VP) : 0
+B3_q b3_q 0 V = floor(v(b2_q)/2)
+B3 b3 0 V = (v(b2_q) - v(b3_q)*2 > 0) ? v(VP) : 0
+B4_q b4_q 0 V = floor(v(b3_q)/2)
+B4 b4 0 V = (v(b3_q) - v(b4_q)*2 > 0) ? v(VP) : 0
+B5_q b5_q 0 V = floor(v(b4_q)/2)
+B5 b5 0 V = (v(b4_q) - v(b5_q)*2 > 0) ? v(VP) : 0
+B6_q b6_q 0 V = floor(v(b5_q)/2)
+B6 b6 0 V = (v(b5_q) - v(b6_q)*2 > 0) ? v(VP) : 0
+.ends
